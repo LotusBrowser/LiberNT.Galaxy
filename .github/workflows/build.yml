@@ -170,7 +170,7 @@ jobs:
       - name: Build images
         run: |
           . "$HOME/.local/opt/rosbe/rosbe-env.sh"
-          ninja -C "${{ steps.configure.outputs.outdir }}" bootcd lotusosimg lotusosvhd -k0
+          ninja -C "${{ steps.configure.outputs.outdir }}" bootcd liberntimg liberntvhd -k0
 
       - name: Print ccache statistics
         if: ${{ always() && steps.ccache_restore.outcome == 'success' }}
