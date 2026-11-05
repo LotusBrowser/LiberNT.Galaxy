@@ -1,0 +1,50 @@
+name: Auto-Merge LiberNT Branch
+
+on:
+  schedule:
+    # Runs every hour. Adjust as needed (cron is in UTC).
+    - cron: '0 * * * *'
+  workflow_dispatch: # Keep this as a manual backup
+
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+        with:
+          ref: main-nt10
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Add LiberNT/LiberNT as a remote
+        run: |
+          git remote add libernt https://github.com/LiberNT/LiberNT.git
+
+      - name: Fetch the source branch
+        run: |
+          git fetch libernt main-nt10
+
+      - name: Check if merge is needed
+        id: check
+        run: |
+          if git merge-base --is-ancestor libernt/main-nt10 HEAD; then
+            echo "needs_merge=false" >> $GITHUB_OUTPUT
+            echo "Source branch is already merged. Nothing to do."
+          else
+            echo "needs_merge=true" >> $GITHUB_OUTPUT
+            echo "Source branch has new commits. Merging..."
+          fi
+
+      - name: Merge and push
+        if: steps.check.outputs.needs_merge == 'true'
+        run: |
+          git merge libernt/main-nt10 --no-edit --allow-unrelated-histories
+          git push origin main-nt10
