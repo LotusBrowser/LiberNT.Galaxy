@@ -157,6 +157,7 @@ KMT_TESTFUNC Test_IoContainerId;
 KMT_TESTFUNC Test_IoCreateFile;
 KMT_TESTFUNC Test_IoDeviceInterface;
 KMT_TESTFUNC Test_IoEvent;
+KMT_TESTFUNC Test_IoStorageDumpPath;
 KMT_TESTFUNC Test_IoWmiAcpi;
 KMT_TESTFUNC Test_IoFilesystem;
 KMT_TESTFUNC Test_IoInterrupt;
@@ -192,6 +193,7 @@ KMT_TESTFUNC Test_IoTimerKM;
 #endif
 KMT_TESTFUNC Test_IoVolume;
 KMT_TESTFUNC Test_KdSystemDebugControl;
+KMT_TESTFUNC Test_KdUsbNetRules;
 KMT_TESTFUNC Test_KsecBcrypt;
 KMT_TESTFUNC Test_KeWddmExports;
 KMT_TESTFUNC Test_KeApc;
@@ -467,6 +469,7 @@ const KMT_TEST TestList[] =
     { "IoWmiAcpi",                          Test_IoWmiAcpi },
     { "IoDeviceInterface",                  Test_IoDeviceInterface },
     { "IoEvent",                            Test_IoEvent },
+    { "IoStorageDumpPath",            Test_IoStorageDumpPath },
     { "IoFilesystem",                       Test_IoFilesystem },
     { "IoInterrupt",                        Test_IoInterrupt },
     { "IoIommu",                            Test_IoIommu },
@@ -519,6 +522,7 @@ const KMT_TEST TestList[] =
     { "IoReportRootDevice",                 Test_IoReportRootDevice },
     { "IoVolume",                           Test_IoVolume },
     { "KdSystemDebugControl",               Test_KdSystemDebugControl },
+    { "KdUsbNetRules",                      Test_KdUsbNetRules },
     { "KsecBcrypt",                         Test_KsecBcrypt },
     { "KeWddmExports",                      Test_KeWddmExports },
     { "KeApc",                              Test_KeApc },

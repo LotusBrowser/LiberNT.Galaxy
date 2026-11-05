@@ -9,6 +9,7 @@
 
 #define KDNET_ENTROPY_SAMPLES   1024
 #define KDNET_ADDRESS_WAIT      (8 * KDNET_SECOND)
+#define KDNET_ADDRESS_NOTICE    (2 * KDNET_SECOND)
 #define KDNET_RECEIVE_BURST     32
 #define KDNET_CLOCK_STALL_LIMIT 256
 #define KDNET_CLOCK_STEP        50
@@ -53,6 +54,27 @@ KdNetTime(VOID)
 }
 
 static
+BOOLEAN
+KdpIsConnected(VOID)
+{
+    /* TODO: the relay acknowledges nothing, so reaching it means having an address and the relay's resolved name */
+    return KdNetReady && KdIpAddress && (KdNetOptions.HostIp || !KdNetOptions.HostName[0]);
+}
+
+static
+PCSTR
+KdpVisibleKey(VOID)
+{
+    if (!KdpIsConnected())
+        return NULL;
+
+    if (KdNetOptions.ShowKey)
+        return KdNetOptions.Key;
+
+    return KdNetOptions.HaveKey ? NULL : KdSessionKeyText;
+}
+
+static
 VOID
 KdpShowHost(VOID)
 {
@@ -60,10 +82,18 @@ KdpShowHost(VOID)
     ULONG Host = KdNetOptions.HostIp;
     int Length;
 
-    if (KdpHostShown || !KdIpAddress || !Host || !KdNetHost.ShowPrompt)
+    if (KdpHostShown || !KdpIsConnected() || !KdNetHost.ShowPrompt)
         return;
 
     KdpHostShown = TRUE;
+
+    /* The host draws the key with every prompt, and the key is all a person needs to see */
+    if (KdpVisibleKey() || !Host)
+    {
+        KdNetHost.ShowPrompt(NULL);
+        return;
+    }
+
     if (KdNetOptions.HostName[0])
     {
         Length = _snprintf(Text, sizeof(Text), "Connected to %s", KdNetOptions.HostName);
@@ -173,6 +203,9 @@ KdpParseOptions(
     if (!Options)
         return;
 
+    Text = KdpFindOption(Options, "LOCAL_BROADCAST");
+    KdNetOptions.Broadcast = Text && *Text == '1';
+
     Text = KdpFindOption(Options, "HOST_IP");
     if (Text && KdpParseNumbers(Text, '.', Values, 4) &&
         Values[0] < 256 && Values[1] < 256 && Values[2] < 256 && Values[3] < 256)
@@ -270,7 +303,7 @@ KdpTerminalInitialize(
     _In_ PLOADER_PARAMETER_BLOCK LoaderBlock)
 {
     NTSTATUS Status;
-    ULONG64 Start;
+    ULONG64 Start, Notice;
 
     if (KdNetReady)
         return STATUS_SUCCESS;
@@ -288,9 +321,16 @@ KdpTerminalInitialize(
     KdIpInitialize();
 
     Start = KdNetTime();
-    while ((!KdIpAddress || (KdNetOptions.HostName[0] && !KdNetOptions.HostIp)) &&
+    Notice = Start;
+    while (!KdNetOptions.Broadcast && (!KdIpAddress || (KdNetOptions.HostName[0] && !KdNetOptions.HostIp)) &&
            KdNicLinkState && KdNetTime() - Start < KDNET_ADDRESS_WAIT)
     {
+        if (KdNetTime() >= Notice)
+        {
+            DbgPrint("Network debugger: waiting for an address\n");
+            Notice += KDNET_ADDRESS_NOTICE;
+        }
+
         KdNetService();
         KeStallExecutionProcessor(500);
     }
@@ -370,6 +410,14 @@ KdpTerminalQueryStatus(
     {
         Length = _snprintf(Buffer, Size, "Network debugger: no usable network card");
     }
+    else if (KdNetOptions.Broadcast)
+    {
+        Length = _snprintf(Buffer, Size,
+                           "Network debugger: %02x-%02x-%02x-%02x-%02x-%02x broadcasts to UDP port %u%s",
+                           KdNicAddress[0], KdNicAddress[1], KdNicAddress[2],
+                           KdNicAddress[3], KdNicAddress[4], KdNicAddress[5], KDNET_BROADCAST_OUTPUT_PORT,
+                           KdNicLinkState ? "" : ", no link yet");
+    }
     else if (!KdIpAddress)
     {
         Length = _snprintf(Buffer, Size,
@@ -416,18 +464,18 @@ KdpTerminalQueryKey(
     _Out_writes_z_(Size) PCHAR Buffer,
     _In_ ULONG Size)
 {
+    PCSTR Key;
     int Length;
 
     if (!Size)
         return 0;
 
     *Buffer = ANSI_NULL;
-    if (KdNetOptions.ShowKey)
-        Length = _snprintf(Buffer, Size, "%s", KdNetOptions.Key);
-    else if (!KdNetReady || KdNetOptions.HaveKey)
+    Key = KdpVisibleKey();
+    if (!Key)
         return 0;
-    else
-        Length = _snprintf(Buffer, Size, "%s", KdSessionKeyText);
+
+    Length = _snprintf(Buffer, Size, "%s", Key);
     if (Length < 0 || (ULONG)Length >= Size)
         Length = Size - 1;
 

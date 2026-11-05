@@ -175,6 +175,7 @@ list(APPEND KMTEST_DRV_SOURCE
     ntos_io/IoCsqKM.c
     ntos_io/IoDeviceInterface.c
     ntos_io/IoEvent.c
+    ntos_io/IoStorageDumpPath.c
     ntos_io/IoFilesystem.c
     ntos_io/IoInterrupt.c
     ntos_io/IoIommu.c
@@ -196,6 +197,7 @@ list(APPEND KMTEST_DRV_SOURCE
     ntos_io/IoVolume.c
     ntos_io/IoWmiAcpi.c
     ntos_kd/KdSystemDebugControl.c
+    ntos_kd/KdUsbNetRules.c
     ksecdd/KsecBcrypt.c
     ntos_ke/KeDpcWatchdog.c
     ntos_ke/KeWddmExports.c
@@ -531,6 +533,7 @@ list(APPEND KMTEST_SOURCE
     ntos_mm/NtCreateSection_user.c
     ntos_mm/NtUserPhysicalPages.c
     ntos_mm/NtProcessClone.c
+    ntos_po/BatteryClassNotify_user.c
     ntos_po/PoIrp_user.c
     ntos_po/PoFxState_user.c
     tcpip/TcpIp_user.c
@@ -576,6 +579,7 @@ add_dependencies(kmtest_drivers
     kernel32_drv
     mmmaplockedpagesspecifycache_drv
     ntcreatesection_drv
+    batteryclassnotify_drv
     poirp_drv
     tcpip_drv
     cccopyread_drv
