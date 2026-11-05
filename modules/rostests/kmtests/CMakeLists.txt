@@ -202,6 +202,8 @@ list(APPEND KMTEST_DRV_SOURCE
     ntos_ke/KeAffinityKM.c
     ntos_ke/KeApc.c
     ntos_ke/KeApcInject.c
+    ntos_ke/KeApcScheduling.c
+    ntos_ke/KeDeferredReady.c
     ntos_ke/KeBugCheckCbKM.c
     ntos_ke/KeDevQueue.c
     ntos_ke/KeCriticalRegionKM.c
@@ -345,6 +347,10 @@ endif()
 if(REACTOS_USE_WDDM AND (REACTOS_WDDM_TARGET_LEVEL GREATER_EQUAL 2000))
     list(APPEND KMTEST_DRV_SOURCE directx/SoftGpuGpuVaIsolation.c)
     set(KMTEST_SOFTGPU_GPUVA_ISOLATION TRUE)
+endif()
+
+if(ARCH STREQUAL "amd64")
+    list(APPEND KMTEST_DRV_SOURCE ntos_ke/amd64/KeSwitchHandoff.c)
 endif()
 
 if(ARCH STREQUAL "i386" OR ARCH STREQUAL "amd64")
