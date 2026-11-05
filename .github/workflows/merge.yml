@@ -2,7 +2,8 @@ name: Auto-Merge LiberNT Branch
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    # Every 30 minutes (UTC): 00:00, 00:30, 01:00, 01:30, ...
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -13,8 +14,6 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      # PAT is required so the resulting push triggers the build workflow
-      # (GITHUB_TOKEN pushes are suppressed from starting other runs).
       - name: Checkout current repository
         uses: actions/checkout@v4
         with:
@@ -49,8 +48,6 @@ jobs:
       - name: Merge and push
         if: steps.check.outputs.needs_merge == 'true'
         run: |
-          # --no-ff guarantees a merge commit authored by Lotus Actions,
-          # so the build workflow's author filter always matches.
           git merge libernt/main-nt10 --no-ff --allow-unrelated-histories \
             -m "Merge LiberNT/LiberNT main-nt10 into main-nt10"
           git push origin main-nt10
