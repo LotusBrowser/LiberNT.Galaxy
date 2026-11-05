@@ -2,27 +2,30 @@ name: Auto-Merge LiberNT Branch
 
 on:
   schedule:
-    # Runs every hour. Adjust as needed (cron is in UTC).
     - cron: '0 * * * *'
-  workflow_dispatch: # Keep this as a manual backup
+  workflow_dispatch:
+
+concurrency:
+  group: auto-merge-libernt
+  cancel-in-progress: false
 
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
+      # PAT is required so the resulting push triggers the build workflow
+      # (GITHUB_TOKEN pushes are suppressed from starting other runs).
       - name: Checkout current repository
         uses: actions/checkout@v4
         with:
           ref: main-nt10
           fetch-depth: 0
+          token: ${{ secrets.LOTUS_ACTIONS_PAT }}
 
-      - name: Configure Git
+      - name: Configure Git as Lotus Actions
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config user.name  "Lotus Actions"
+          git config user.email "noreply@browselotus.net"
 
       - name: Add LiberNT/LiberNT as a remote
         run: |
@@ -37,7 +40,7 @@ jobs:
         run: |
           if git merge-base --is-ancestor libernt/main-nt10 HEAD; then
             echo "needs_merge=false" >> $GITHUB_OUTPUT
-            echo "Source branch is already merged. Nothing to do."
+            echo "Source branch is already merged."
           else
             echo "needs_merge=true" >> $GITHUB_OUTPUT
             echo "Source branch has new commits. Merging..."
@@ -46,5 +49,8 @@ jobs:
       - name: Merge and push
         if: steps.check.outputs.needs_merge == 'true'
         run: |
-          git merge libernt/main-nt10 --no-edit --allow-unrelated-histories
+          # --no-ff guarantees a merge commit authored by Lotus Actions,
+          # so the build workflow's author filter always matches.
+          git merge libernt/main-nt10 --no-ff --allow-unrelated-histories \
+            -m "Merge LiberNT/LiberNT main-nt10 into main-nt10"
           git push origin main-nt10
