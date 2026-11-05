@@ -1,9 +1,5 @@
 name: Lotus Build
 
-# Builds LotusOS (the NT system) and uploads the boot CD and disk images.
-#   * push / pull request: Debug build for amd64.
-#   * Run workflow (manual): pick one architecture or "all", and Debug or Release.
-#   * Tag "v*": Release build for amd64 and arm64, published as a GitHub pre-release.
 on:
   push:
     branches: [main-nt10]
@@ -12,10 +8,7 @@ on:
       - '**/*.md'
       - 'translations/**'
       - '.github/ISSUE_TEMPLATE/**'
-  pull_request:
-    paths-ignore:
-      - '**/*.md'
-      - 'translations/**'
+  # pull_request trigger REMOVED: PRs are not "merges from Lotus Actions".
   workflow_dispatch:
     inputs:
       arch:
@@ -31,7 +24,7 @@ on:
 
 concurrency:
   group: lotus-build-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -39,6 +32,16 @@ permissions:
 jobs:
   plan:
     name: Plan build matrix
+    # Only build when:
+    #   - manually triggered, OR
+    #   - a tag was pushed (release), OR
+    #   - the commit pushed to main-nt10 was authored by "Lotus Actions"
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.ref_type == 'tag' ||
+      (github.event_name == 'push' &&
+       github.event.head_commit.author.name  == 'Lotus Actions' &&
+       github.event.head_commit.author.email == 'noreply@browselotus.net')
     runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.plan.outputs.matrix }}
