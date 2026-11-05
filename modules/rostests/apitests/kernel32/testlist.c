@@ -95,6 +95,8 @@ extern void func_SetFileAllocationInfo(void);
 extern void func_SetThreadStackGuarantee(void);
 extern void func_SetUnhandledExceptionFilter(void);
 extern void func_SetWaitableTimerEx(void);
+extern void func_WaitableTimerHighResolution(void);
+extern void func_SwitchToThreadCost(void);
 extern void func_SuspendThread(void);
 extern void func_SystemFirmware(void);
 extern void func_TerminateProcess(void);
@@ -107,6 +109,7 @@ extern void func_WaitForMultipleObjects(void);
 extern void func_WerRegisterFile(void);
 extern void func_WideCharToMultiByte(void);
 extern void func_Wow64GetThreadContext(void);
+extern void func_WriteFileBadBuffer(void);
 extern void func_WriteFileSeekBack(void);
 extern void func_XState(void);
 
@@ -205,6 +208,8 @@ const struct test winetest_testlist[] =
     { "SetThreadStackGuarantee",     func_SetThreadStackGuarantee },
     { "SetUnhandledExceptionFilter", func_SetUnhandledExceptionFilter },
     { "SetWaitableTimerEx",          func_SetWaitableTimerEx },
+    { "WaitableTimerHighResolution", func_WaitableTimerHighResolution },
+    { "SwitchToThreadCost", func_SwitchToThreadCost },
     { "SuspendThread",               func_SuspendThread },
     { "SystemFirmware",              func_SystemFirmware },
     { "TerminateProcess",            func_TerminateProcess },
@@ -217,6 +222,7 @@ const struct test winetest_testlist[] =
     { "WerRegisterFile",             func_WerRegisterFile },
     { "WideCharToMultiByte",         func_WideCharToMultiByte },
     { "Wow64GetThreadContext",       func_Wow64GetThreadContext },
+    { "WriteFileBadBuffer",          func_WriteFileBadBuffer },
     { "WriteFileSeekBack",           func_WriteFileSeekBack },
     { "XState",                      func_XState },
     { 0, 0 }

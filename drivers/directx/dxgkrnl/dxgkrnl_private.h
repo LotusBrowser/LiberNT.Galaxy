@@ -1440,6 +1440,7 @@ struct _DXGKRNL_ADAPTER
     D3DKMT_HANDLE               CddPrimaryBindingHandle;
     ULONG64                     CddBindingGeneration;
     struct _DXGKRNL_CDD_CAPTURE *CddCapture;
+    BOOLEAN CddCaptureUnsupported;
     BOOLEAN                     GdiHardwareAcceleration;
     KMUTEX                      GdiBltTextureMutex;
     LIST_ENTRY                  GdiBltTextureList;
@@ -3587,7 +3588,8 @@ DxgkSyncObjectCpuWaitBatch(
     _In_reads_(ObjectCount) CONST UINT64 *FenceValues,
     _In_ ULONG ObjectCount,
     _In_opt_ HANDLE AsyncEventHandle,
-    _In_ BOOLEAN WaitAny);
+    _In_ BOOLEAN WaitAny,
+    _In_ KPROCESSOR_MODE WaitMode);
 
 VOID
 NTAPI
@@ -4234,6 +4236,12 @@ ULONG
 NTAPI
 DxgkAllocateSubmissionFenceId(
     _In_ PDXGKRNL_ADAPTER Adapter);
+
+VOID
+NTAPI
+DxgkReturnSubmissionFenceId(
+    _In_ PDXGKRNL_ADAPTER Adapter,
+    _In_ ULONG FenceId);
 
 BOOLEAN
 NTAPI

@@ -98,6 +98,8 @@ list(APPEND SOURCE
     SetThreadStackGuarantee.c
     SetUnhandledExceptionFilter.c
     SetWaitableTimerEx.c
+    WaitableTimerHighResolution.c
+    SwitchToThreadCost.c
     SuspendThread.c
     SystemFirmware.c
     TerminateProcess.c
@@ -111,6 +113,7 @@ list(APPEND SOURCE
     WideCharToMultiByte.c
     Wow64GetThreadContext.c
     WriteFile.c
+    WriteFileBadBuffer.c
     WriteFileSeekBack.c
     XState.c
 )
