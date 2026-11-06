@@ -173,7 +173,7 @@ jobs:
       - name: Build images
         run: |
           . "$HOME/.local/opt/rosbe/rosbe-env.sh"
-          ninja -C "${{ steps.configure.outputs.outdir }}" bootcd liberntimg liberntvhd -k0
+          ninja -C "${{ steps.configure.outputs.outdir }}" bootcd -k0
 
       - name: Print ccache statistics
         if: ${{ always() && steps.ccache_restore.outcome == 'success' }}
@@ -195,27 +195,6 @@ jobs:
         with:
           name: LotusOS-bootcd-iso-${{ steps.images.outputs.tag }}
           path: ${{ steps.configure.outputs.outdir }}/bootcd.iso
-          if-no-files-found: error
-
-      - name: Upload LotusOS.img
-        uses: actions/upload-artifact@v7
-        with:
-          name: LotusOS-img-${{ steps.images.outputs.tag }}
-          path: ${{ steps.configure.outputs.outdir }}/LotusOS.img
-          if-no-files-found: error
-
-      - name: Upload LotusOS.vhd
-        uses: actions/upload-artifact@v7
-        with:
-          name: LotusOS-vhd-${{ steps.images.outputs.tag }}
-          path: ${{ steps.configure.outputs.outdir }}/LotusOS.vhd
-          if-no-files-found: error
-
-      - name: Upload LotusOS.vhdx
-        uses: actions/upload-artifact@v7
-        with:
-          name: LotusOS-vhdx-${{ steps.images.outputs.tag }}
-          path: ${{ steps.configure.outputs.outdir }}/LotusOS.vhdx
           if-no-files-found: error
 
       - name: Check build dependencies
