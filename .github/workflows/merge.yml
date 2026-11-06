@@ -3,7 +3,7 @@ name: Auto-Merge LiberNT Branch
 on:
   schedule:
     # Every 30 minutes (UTC): 00:00, 00:30, 01:00, 01:30, ...
-    - cron: '*/30 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 concurrency:
