@@ -12,6 +12,7 @@ list(APPEND SOURCE
     CallbackCallingConventions.c
     Arm64ThreadContext.c
     ConsoleCP.c
+    ConsoleInputSignal.c
     ConsoleDbcsCells.c
     ConsoleProcessInheritance.c
     ConsoleVirtualTerminal.c
@@ -84,6 +85,7 @@ list(APPEND SOURCE
     PixeloramaCompat.c
     ProcessPreferredUILanguages.c
     PseudoConsoleCtrlC.c
+    PseudoConsoleVtInput.c
     PssSnapshot.c
     PrivMoveFileIdentityW.c
     QueueUserAPC.c
