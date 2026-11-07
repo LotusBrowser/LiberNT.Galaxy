@@ -17,3 +17,5 @@ NODE_PATH="$orb_tools_dir/node_modules" node media/graphics/start-button/render.
 ```
 
 Normal ReactOS builds use the checked-in PNGs and do not require Node.js or resvg.
+
+LiberNT: Galaxy Edition replaces these PNGs with the Galaxy mark cropped from `media/graphics/branding/libernt-banner.png`. Regenerate them with `python3 artwork/make_galaxy_branding.py`; running `render.js` restores the stock blue artwork.

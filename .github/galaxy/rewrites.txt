@@ -46,3 +46,13 @@ boot/bootdata/txtsetup.sif::s/^(cdname *= *")LiberNT( Installation Media")/\1Lib
 boot/bootdata/*.ini::s/^(TitleText=)LiberNT([[:space:]]*)$/\1LiberNT: Galaxy Edition\2/
 boot/bootdata/bootcd.ini::s/^(LiveImg_RamDisk_Normal=")LiberNT(")/\1LiberNT: Galaxy Edition\2/
 boot/bootdata/livecd.ini::s/^(LiveCD=")LiberNT(")/\1LiberNT: Galaxy Edition\2/
+
+# Shell frame dark palette and accent fallbacks (Settings, Explorer and other frame windows).
+base/shell/shellframe/theme.cpp::s/RGB\(32, 32, 32\)/RGB(21, 21, 61)/g
+base/shell/shellframe/theme.cpp::s/RGB\(43, 43, 43\)/RGB(29, 29, 75)/g
+base/shell/shellframe/theme.cpp::s/RGB\(25, 25, 25\)/RGB(17, 17, 53)/g
+base/shell/shellframe/theme.cpp::s/RGB\(0x1F, 0x1F, 0x1F\)/RGB(20, 20, 60)/g
+base/shell/shellframe/theme.cpp::s/RGB\(0x1E, 0x1E, 0x1E\)/RGB(20, 20, 60)/g
+base/shell/shellframe/theme.cpp::s/RGB\(0x4C, 0xC2, 0xFF\)/RGB(0xB6, 0x8D, 0xFB)/g
+base/shell/shellframe/theme.cpp::s/RGB\(0x00, 0x67, 0xC0\)/RGB(0x69, 0x28, 0xD2)/g
+dll/win32/windows.ui/uisettings.c::s/0x00ffd8a6, 0x00edb976, 0x00e39c42, 0x00d77800, 0x009e5a00, 0x00754200, 0x00422600/0x00fdc1d7, 0x00fb8db6, 0x00f95995, 0x00f72f7b, 0x00d22869, 0x00881a44, 0x004a0e25/

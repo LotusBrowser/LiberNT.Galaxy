@@ -12,6 +12,7 @@
 #include "bootui_font.h"
 #include "bootui_icons.h"
 #include "bootui_logo.h"
+#include "bootui_banner.h"
 
 #define BOOTUI_TEXT 0xF3F6F8
 #define BOOTUI_MUTED 0x9EABC3
@@ -330,15 +331,15 @@ BootUiDrawErrors(ULONG Height)
 }
 
 static VOID
-BootUiLogo(ULONG Left, ULONG Top, ULONG Scale)
+BootUiImage(const UCHAR* Image, ULONG ImageWidth, ULONG ImageHeight, ULONG Left, ULONG Top, ULONG Scale)
 {
-    ULONG Width = 48 / Scale, Height = 42 / Scale;
+    ULONG Width = ImageWidth / Scale, Height = ImageHeight / Scale;
     ULONG X, Y;
     for (Y = 0; Y < Height; ++Y)
     {
         for (X = 0; X < Width; ++X)
         {
-            const UCHAR* Pixel = bootui_logo + (Y * Scale * 48 + X * Scale) * 4;
+            const UCHAR* Pixel = Image + (Y * Scale * ImageWidth + X * Scale) * 4;
             ULONG Color, Alpha = Pixel[3];
             if (!Alpha)
                 continue;
@@ -351,17 +352,19 @@ BootUiLogo(ULONG Left, ULONG Top, ULONG Scale)
 }
 
 static VOID
+BootUiLogo(ULONG Left, ULONG Top, ULONG Scale)
+{
+    BootUiImage(bootui_logo, 48, 42, Left, Top, Scale);
+}
+
+static VOID
 BootUiBrand(VOID)
 {
     ULONG Scale = BootUiHeight < 600 ? 2 : 1;
-    ULONG Width = 48 / Scale, Height = 42 / Scale;
-    ULONG Size = BootUiHeight < 600 ? 20 : 26;
-    ULONG TextWidth = BootUiTextWidth("LiberNT", Size, MAXULONG);
-    ULONG Left = (BootUiWidth - Width - 14 - TextWidth) / 2;
-    ULONG Top = BootUiHeight < 600 ? 12 : 28;
-    BootUiLogo(Left, Top, Scale);
-    BootUiText(Left + Width + 14, Top + (Height - min(Height, Size)) / 2 - 1,
-               "LiberNT", Size, BOOTUI_TEXT, TextWidth, MAXULONG);
+    ULONG Width = 168 / Scale;
+    ULONG Left = (BootUiWidth - Width) / 2;
+    ULONG Top = BootUiHeight < 600 ? 10 : 24;
+    BootUiImage(bootui_banner, 168, 48, Left, Top, Scale);
 }
 
 static VOID

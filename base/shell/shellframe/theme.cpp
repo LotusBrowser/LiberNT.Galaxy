@@ -33,7 +33,7 @@ AccentFromPalette(BOOL dark)
         const BYTE *entry = &palette[(dark ? 1 : 4) * 4];
         return RGB(entry[0], entry[1], entry[2]);
     }
-    return dark ? RGB(0x4C, 0xC2, 0xFF) : RGB(0x00, 0x67, 0xC0);
+    return dark ? RGB(0xB6, 0x8D, 0xFB) : RGB(0x69, 0x28, 0xD2);
 }
 
 Theme::Theme() :
@@ -126,7 +126,7 @@ Theme::BuildPalette()
     }
     if (m_Dark)
     {
-        window = RGB(32, 32, 32);
+        window = RGB(21, 21, 61);
         c.Window = window;
         c.Text = white;
         c.TextSecondary = Blend(0xC5, white, window);
@@ -140,14 +140,14 @@ Theme::BuildPalette()
         c.CardBorder = Blend(0x19, black, window);
         c.Divider = Blend(0x15, white, window);
         c.ControlFill = Blend(0x0F, white, window);
-        c.ControlFillFocus = RGB(0x1F, 0x1F, 0x1F);
+        c.ControlFillFocus = RGB(20, 20, 60);
         c.ControlStroke = Blend(0x12, white, window);
         c.ControlStrongStroke = Blend(0x8B, white, window);
         c.Glyph = white;
-        c.TabStrip = RGB(32, 32, 32);
-        c.TabSelected = RGB(43, 43, 43);
-        c.ToolbarBand = RGB(43, 43, 43);
-        c.Content = RGB(25, 25, 25);
+        c.TabStrip = RGB(21, 21, 61);
+        c.TabSelected = RGB(29, 29, 75);
+        c.ToolbarBand = RGB(29, 29, 75);
+        c.Content = RGB(17, 17, 53);
     }
     else
     {
@@ -198,7 +198,7 @@ Theme::BuildPalette()
         c.CardBorder = AvoidKey(Blend(0x19, ink, k), k);
         c.Divider = AvoidKey(Blend(0x19, ink, k), k);
         c.ControlFill = AvoidKey(Blend(m_MaterialDark ? 0x14 : 0xB3, white, k), k);
-        c.ControlFillFocus = AvoidKey(m_MaterialDark ? Blend(0xB3, RGB(0x1E, 0x1E, 0x1E), k) : white, k);
+        c.ControlFillFocus = AvoidKey(m_MaterialDark ? Blend(0xB3, RGB(20, 20, 60), k) : white, k);
         c.ControlStroke = AvoidKey(Blend(0x19, ink, k), k);
         c.ControlStrongStroke = AvoidKey(Blend(0x8B, ink, k), k);
     }

@@ -77,11 +77,13 @@ list(APPEND UEFILDR_BOOTMGR_SOURCE
     ui/bootui.c
 )
 
-foreach(asset font icons logo)
+foreach(asset font icons logo banner)
     if(asset STREQUAL "font")
         set(asset_source ${REACTOS_SOURCE_DIR}/media/fonts/selawk.ttf)
     elseif(asset STREQUAL "icons")
         set(asset_source ${CMAKE_CURRENT_SOURCE_DIR}/ui/assets/icons.alpha)
+    elseif(asset STREQUAL "banner")
+        set(asset_source ${CMAKE_CURRENT_SOURCE_DIR}/ui/assets/banner.rgba)
     else()
         set(asset_source ${CMAKE_CURRENT_SOURCE_DIR}/ui/assets/logo.rgba)
     endif()

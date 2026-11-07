@@ -343,7 +343,7 @@ static DWORD get_app_theme(void)
 
 static DWORD initialize_accent_palette( HKEY hkey, DWORD offset )
 {
-    DWORD palette[7] = { 0x00ffd8a6, 0x00edb976, 0x00e39c42, 0x00d77800, 0x009e5a00, 0x00754200, 0x00422600 };
+    DWORD palette[7] = { 0x00fdc1d7, 0x00fb8db6, 0x00f95995, 0x00f72f7b, 0x00d22869, 0x00881a44, 0x004a0e25 };
     DWORD len = sizeof(palette);
 
     RegSetValueExW( hkey, L"AccentPalette", 0, REG_BINARY, (const BYTE *)&palette, len );
