@@ -1,0 +1,9 @@
+# Auto-adapt incoming upstream changes to Galaxy Edition.
+# Format:  glob::sed-expression    (extended regex, applied only to files upstream changed)
+# Put this file at .github/galaxy/rewrites.txt
+#
+# Swap upstream's accent color for Galaxy purple in any new/changed XAML or CSS:
+# *.xaml::s/#0078D4/#7B2FF7/Ig
+# *.css::s/#0078D4/#7B2FF7/Ig
+# Rename branding strings anywhere in source:
+# *.cs::s/LiberNT Edition/LiberNT: Galaxy Edition/g

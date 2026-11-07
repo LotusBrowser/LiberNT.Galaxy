@@ -1,0 +1,8 @@
+# Files where Galaxy Edition's version ALWAYS wins, even if upstream changes them.
+# One glob per line. * matches across folders. Lines starting with # are comments.
+# Put this file at .github/galaxy/keep-ours.txt
+#
+# assets/branding/*
+# *.ico
+# Themes/Galaxy*.xaml
+# README.md
