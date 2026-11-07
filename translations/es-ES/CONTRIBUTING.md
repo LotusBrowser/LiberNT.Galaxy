@@ -2,7 +2,7 @@
 
 > [English](../../CONTRIBUTING.md) | [中文](../zh-CN/CONTRIBUTING.md) | [Français](../fr-FR/CONTRIBUTING.md) | **Español** | [日本語](../ja-JP/CONTRIBUTING.md) | [العربية](../ar-MA/CONTRIBUTING.md) | [Українська](../uk-UA/CONTRIBUTING.md)
 
-LiberNT agradece los informes de errores, las pruebas, las correcciones, las nuevas funciones y la documentación. Esta página explica cómo enviar tu trabajo. Las reglas de ingeniería que sigue cada cambio están en [AGENTS.md](../../AGENTS.md), y se aplican por igual a los colaboradores humanos y a las herramientas de IA.
+LiberNT: Galaxy Edition agradece los informes de errores, las pruebas, las correcciones, las nuevas funciones y la documentación. Esta página explica cómo enviar tu trabajo. Las reglas de ingeniería que sigue cada cambio están en [AGENTS.md](../../AGENTS.md), y se aplican por igual a los colaboradores humanos y a las herramientas de IA.
 
 - [¿Qué hacer?](#qué-hacer)
 - [¿Cómo contribuir?](#cómo-contribuir)
@@ -12,16 +12,16 @@ LiberNT agradece los informes de errores, las pruebas, las correcciones, las nue
 **Aviso legal:** si has visto código fuente propietario de Microsoft Windows, tu contribución no se aceptará por una posible infracción de derechos de autor. Antes de contribuir, debes afirmar que lo siguiente es cierto:
 >Juro que no he usado ni visto el código fuente de ninguna versión del sistema operativo Windows
 >ni de ningún producto de Microsoft que pueda estar relacionado con el proyecto propuesto y que esté bajo una licencia incompatible
->con la contribución a LiberNT, incluido, entre otros, el código fuente filtrado de Windows NT 3.5, NT 4 y 2000
+>con la contribución a LiberNT: Galaxy Edition, incluido, entre otros, el código fuente filtrado de Windows NT 3.5, NT 4 y 2000
 >y el Windows Research Kernel.
 
-LiberNT se construye en sala limpia: a partir de las cabeceras del Windows SDK y del WDK, los símbolos públicos de Windows 11, la documentación de Microsoft y ejecuciones de caja negra en Windows 11. Consulta [Fuentes de verdad](../../AGENTS.md#sources-of-truth) para saber qué se puede usar y qué no.
+LiberNT: Galaxy Edition se construye en sala limpia: a partir de las cabeceras del Windows SDK y del WDK, los símbolos públicos de Windows 11, la documentación de Microsoft y ejecuciones de caja negra en Windows 11. Consulta [Fuentes de verdad](../../AGENTS.md#sources-of-truth) para saber qué se puede usar y qué no.
 
 ## ¿Qué hacer?
 
 ### Informar de errores
 
-Informa de los errores en [Issues](https://github.com/LiberNT/LiberNT/issues). Indica la arquitectura (amd64, i386, arm64 o riscv64), el tipo de compilación, el commit que compilaste y los pasos que llevan al problema. Un registro de depuración del puerto serie ayuda mucho.
+Informa de los errores en [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues). Indica la arquitectura (amd64, i386, arm64 o riscv64), el tipo de compilación, el commit que compilaste y los pasos que llevan al problema. Un registro de depuración del puerto serie ayuda mucho.
 
 ### Corregir errores
 
@@ -29,23 +29,23 @@ Corrige el comportamiento de fondo, no el síntoma, y haz el cambio correcto má
 
 ### Corregir pruebas
 
-Las pruebas comparan LiberNT con el comportamiento de Windows. Muchas de ellas tampoco pasan limpiamente en Windows 11, así que antes de cambiar LiberNT para que pase una prueba, ejecuta la misma prueba en Windows 11 y compara los resultados comprobación por comprobación. Si Windows 11 también falla una comprobación, el error está en lo que la prueba espera. Consulta [Pruebas frente a Windows 11](../../AGENTS.md#testing-against-windows-11).
+Las pruebas comparan LiberNT: Galaxy Edition con el comportamiento de Windows. Muchas de ellas tampoco pasan limpiamente en Windows 11, así que antes de cambiar LiberNT: Galaxy Edition para que pase una prueba, ejecuta la misma prueba en Windows 11 y compara los resultados comprobación por comprobación. Si Windows 11 también falla una comprobación, el error está en lo que la prueba espera. Consulta [Pruebas frente a Windows 11](../../AGENTS.md#testing-against-windows-11).
 
-### Probar LiberNT
+### Probar LiberNT: Galaxy Edition
 
-Ejecuta LiberNT en una máquina virtual o en hardware real e informa de lo que falla. El hardware real es lo que más importa para los controladores: una máquina virtual solo demuestra que un controlador se instala y se carga.
+Ejecuta LiberNT: Galaxy Edition en una máquina virtual o en hardware real e informa de lo que falla. El hardware real es lo que más importa para los controladores: una máquina virtual solo demuestra que un controlador se instala y se carga.
 
 ### Implementar cosas nuevas
 
-Windows 11 es la referencia de compatibilidad. Antes de empezar un trabajo grande, pregunta en [Issues](https://github.com/LiberNT/LiberNT/issues) o en [Discord](https://discord.gg/BpcKg7FZ2) si alguien ya está trabajando en ello.
+Windows 11 es la referencia de compatibilidad. Antes de empezar un trabajo grande, pregunta en [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) si alguien ya está trabajando en ello.
 
 ### Escribir documentación
 
-Las guías y las notas de diseño van en la [Wiki](https://github.com/LiberNT/LiberNT/wiki). Respeta las prácticas de [ingeniería inversa en sala limpia], y escribe solo lo que muestran el código fuente, la documentación o una ejecución de pruebas.
+Las guías y las notas de diseño van en la [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki). Respeta las prácticas de [ingeniería inversa en sala limpia], y escribe solo lo que muestran el código fuente, la documentación o una ejecución de pruebas.
 
 ### Código de terceros
 
-Los componentes sincronizados con Wine figuran en [media/doc/WINESYNC.txt](../../media/doc/WINESYNC.txt), y el resto del código de terceros en [media/doc/3rd Party Files.txt](../../media/doc/3rd%20Party%20Files.txt). Mantén los cambios de LiberNT en ese código dentro de `#ifdef __REACTOS__`, con el código original en la rama `#else`, para que la siguiente sincronización los conserve.
+Los componentes sincronizados con Wine figuran en [media/doc/WINESYNC.txt](../../media/doc/WINESYNC.txt), y el resto del código de terceros en [media/doc/3rd Party Files.txt](../../media/doc/3rd%20Party%20Files.txt). Mantén los cambios de LiberNT: Galaxy Edition en ese código dentro de `#ifdef __REACTOS__`, con el código original en la rama `#else`, para que la siguiente sincronización los conserve.
 
 ## ¿Cómo contribuir?
 
@@ -83,11 +83,11 @@ Puedes usar herramientas de IA. Dinos en la pull request en qué partes te han a
 - *Busca pull requests similares antes de enviar la tuya.* Puede que ya se haya abierto una pull request o una issue parecida. En ese caso, comenta y revisa esa.
 - *Mantén tu contribución pequeña y centrada en el tema.* Resiste la tentación de corregir problemas no relacionados que encuentres por el camino; abre una issue para ellos.
 - *Respeta nuestro __[estilo de código]__.*
-- *No tengas miedo de preguntar.* Pregunta al equipo en [Discord](https://discord.gg/BpcKg7FZ2) o en [Matrix](https://matrix.to/#/#libernt:matrix.org).
+- *No tengas miedo de preguntar.* Pregunta al equipo en [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues).
 
 ## Derechos de autor y licencias
 
-Conservas los derechos de autor de lo que escribes. LiberNT no tiene cesión de derechos de autor ni acuerdo de licencia de colaborador.
+Conservas los derechos de autor de lo que escribes. LiberNT: Galaxy Edition no tiene cesión de derechos de autor ni acuerdo de licencia de colaborador.
 
 - Los archivos nuevos empiezan con la cabecera que se muestra en [Estilo de código](../../AGENTS.md#code-style), con tu nombre y tu correo en la línea `COPYRIGHT` y un identificador de licencia SPDX.
 - Si haces un cambio importante en un archivo existente, puedes añadir tu propia línea `COPYRIGHT` debajo de las existentes.
@@ -95,14 +95,13 @@ Conservas los derechos de autor de lo que escribes. LiberNT no tiene cesión de 
 - Conserva la licencia de los archivos que cambias. El código heredado de ReactOS conserva la licencia indicada en su cabecera.
 - Nunca copies código cuya licencia sea incompatible con la GNU GPL 3.0, y nunca copies código GPL de Linux.
 
-Consulta [CREDITS.md](../../CREDITS.md) para conocer a las personas que hay detrás de LiberNT y ReactOS.
+Consulta [CREDITS.md](../../CREDITS.md) para conocer a las personas que hay detrás de LiberNT: Galaxy Edition y ReactOS.
 
 ## ¿Por dónde empezar?
 
-- Mira las [Issues](https://github.com/LiberNT/LiberNT/issues) abiertas.
+- Mira las [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) abiertas.
 - Busca una prueba que falle, compárala con Windows 11 y haz que pase.
-- Lee la [Wiki](https://github.com/LiberNT/LiberNT/wiki) para encontrar guías y notas de diseño.
-- Pide ayuda en [Discord](https://discord.gg/BpcKg7FZ2) o en [Matrix](https://matrix.to/#/#libernt:matrix.org).
+- Lee la [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki) para encontrar guías y notas de diseño.
 
   [ingeniería inversa en sala limpia]:                           https://en.wikipedia.org/wiki/Clean_room_design
   [pull request]:                                                https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests

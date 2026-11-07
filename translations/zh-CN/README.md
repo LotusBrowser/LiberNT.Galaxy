@@ -18,8 +18,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#许可证)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -87,7 +85,7 @@ LiberNT: Galaxy Edition 将现代硬件与平台引入 NT 架构。
 | 特性 | 实际作用 |
 | --- | --- |
 | **64 位优先** | 内核、HAL 和 FreeLoader 均运行于 amd64、arm64 与 riscv64。 |
-| **UEFI 启动** | 支持 UEFI 固件启动，提供 GOP 帧缓冲和早期显示支持。预装盘同时支持 UEFI 与 BIOS 两种启动方式。 |
+| **UEFI 启动** | 支持 UEFI 固件启动，提供 GOP 帧缓冲和早期显示支持。 |
 | **现代总线与存储** | 覆盖 PCIe、PCI、即插即用、xHCI USB、SD/eMMC，以及各类存储与总线驱动。 |
 | **开发板支持** | 面向真实开发板，包括树莓派及其 RP1 I/O 控制器。 |
 | **Windows 11 驱动模型** | 围绕 Windows 11(NT10)的兼容性与驱动模型展开，并与 Windows 11 本身逐项核对。 |
@@ -128,20 +126,16 @@ LiberNT: Galaxy Edition 将现代硬件与平台引入 NT 架构。
 
 ### 第 2 步：启动
 
-想尽快体验 LiberNT: Galaxy Edition，直接用预装盘：
+想尽快体验 LiberNT: Galaxy Edition，直接用 CD 镜像：
 
-1. 解压 `LiberNT.img`(或 `LiberNT.vhd`)
-2. 在 **QEMU** 等虚拟机中启动；VHD 也可用于 **VirtualBox** 或 **Hyper-V** 第一代虚拟机。Hyper-V 第二代只接受 `LiberNT.vhdx`，并需关闭安全启动
-3. 也可以把 `LiberNT.img` 写入 U 盘或 SD 卡，再从该设备启动，UEFI 与 BIOS 均可
+1. 解压下载的文件，得到 `bootcd.iso`
+2. 在 **QEMU** 等虚拟机中启动，或用它启动 PC
 
-> [!CAUTION]
-> 把 `LiberNT.img` 写入 U 盘或 SD 卡会清空盘上的全部数据。操作前请仔细确认目标设备。
+它会从光盘运行 LiberNT: Galaxy Edition，或启动 LiberNT: Galaxy Edition 安装程序。
 
 ### 第 3 步：安装 LiberNT: Galaxy Edition
 
 在虚拟机或 PC 上启动 `bootcd.iso`，按 **LiberNT: Galaxy Edition 安装程序**的提示操作。
-
-预装盘里同样带有 LiberNT: Galaxy Edition 安装程序。在运行中的系统里执行 `C:\<architecture>\libernt.exe`，例如 `C:\arm64\libernt.exe`，就能把 LiberNT: Galaxy Edition 装到另一块磁盘。
 
 > [!CAUTION]
 > 安装程序会删除并格式化分区。安装前请备份目标磁盘上的重要数据。
@@ -216,16 +210,14 @@ cd LiberNT.Galaxy
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 | 命令 | 生成 | 用途 |
 | --- | --- | --- |
 | `ninja bootcd` | `bootcd.iso` | 在虚拟机或 PC 上从 CD 镜像安装 LiberNT: Galaxy Edition。 |
-| `ninja liberntimg` | `LiberNT.img` | 启动一块已装好 LiberNT: Galaxy Edition 的磁盘。可在 QEMU 等虚拟机中运行，也可写入 U 盘或 SD 卡；UEFI 与 BIOS 均可启动。 |
-| `ninja liberntvhd` | `LiberNT.vhd`、`LiberNT.vhdx` | 在虚拟机里复用同一份预装盘：VHD 用于 VirtualBox 和 Hyper-V 第一代，VHDX 用于 Hyper-V 第二代(该代不支持 VHD)。 |
 
-每个目标都会先把它依赖的内容构建好，产物统一写入输出目录。
+该目标会先把它依赖的内容构建好，`bootcd.iso` 会写入输出目录。
 
 ---
 
@@ -268,7 +260,7 @@ LiberNT.Galaxy/
 
 问题反馈和功能建议请提交到 [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues)，指南与笔记见 [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)。
 
-动手前请阅读 [CONTRIBUTING.md](../../CONTRIBUTING.md) 和 [PULL_REQUEST_MANAGEMENT.md](../../PULL_REQUEST_MANAGEMENT.md)。如果打算做较大的改动，建议先在 [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) 或 [Discord](https://discord.gg/BpcKg7FZ2) 上讨论。
+动手前请阅读 [CONTRIBUTING.md](../../CONTRIBUTING.md) 和 [PULL_REQUEST_MANAGEMENT.md](../../PULL_REQUEST_MANAGEMENT.md)。如果打算做较大的改动，建议先在 [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) 上讨论。
 
 > [!WARNING]
 > **法律声明：** 如果你接触过微软 Windows 的专有源码(包括但不限于泄露的 Windows NT 3.5、NT 4、2000 源码以及 Windows Research Kernel)，由于存在版权风险，你的贡献将无法被接受。
@@ -311,4 +303,3 @@ LiberNT: Galaxy Edition 由 **LiberNT 贡献者**共同构建，由 [Ahmed Arif]
 - [官网](https://libernt.com)
 - [下载最新构建](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- 在 [Discord](https://discord.gg/BpcKg7FZ2) 或 [Matrix](https://matrix.to/#/#libernt:matrix.org) 上交流

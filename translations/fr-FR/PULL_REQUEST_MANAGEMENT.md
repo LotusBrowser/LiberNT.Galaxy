@@ -10,7 +10,7 @@ Afin de garder un nombre acceptable de PR ouvertes mais inactives, il convient d
   - La PR peut être rouverte à tout moment, si vous avez d'autres commentaires ou si de nouvelles modifications ont été faites.
 - Si vous avez besoin de la relecture d'une personne précise, assignez-lui la PR. Ne vous fiez pas seulement à la fonction "review requested" de GitHub.
 - N'oubliez pas que les étiquettes de PR existent. Vous pouvez attribuer une étiquette appropriée à une pull request pour indiquer sa portée, attirer davantage l'attention ou simplement faciliter la navigation.
-- Ne vous sentez pas obligé de commenter tout ce que vous voyez juste pour commenter. Que ce soit sur GitHub, Discord ou Matrix.
+- Ne vous sentez pas obligé de commenter tout ce que vous voyez juste pour commenter. Que ce soit sur GitHub.
 
 Par ailleurs, pour ne pas paraître impoli envers des contributeurs de bonne volonté, évitez :
 - De demander au contributeur un travail sans rapport

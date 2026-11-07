@@ -16,8 +16,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#ライセンス)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -85,7 +83,7 @@ LiberNT: Galaxy Edition は最新のハードウェアとプラットフォー�
 | 機能 | あなたにとっての意味 |
 | --- | --- |
 | **64 ビット優先** | カーネル、HAL、FreeLoader が amd64、arm64、riscv64 で動作します。 |
-| **UEFI ブート** | UEFI ファームウェアで起動し、GOP フレームバッファーと早期の画面表示に対応します。プリインストール済みディスクは UEFI と BIOS のどちらでも起動します。 |
+| **UEFI ブート** | UEFI ファームウェアで起動し、GOP フレームバッファーと早期の画面表示に対応します。 |
 | **最新のバスとストレージ** | PCIe、PCI、プラグアンドプレイ、xHCI による USB、SD/eMMC、そしてストレージとバスのドライバー。 |
 | **ボードのサポート** | Raspberry Pi とその RP1 I/O コントローラーを含む実機ボード。 |
 | **Windows 11 のドライバーモデル** | Windows 11 (NT10) との互換性とドライバーモデルの取り組みを、Windows 11 そのものと照らし合わせて確認しています。 |
@@ -126,20 +124,16 @@ LiberNT: Galaxy Edition は最新のハードウェアとプラットフォー�
 
 ### ステップ 2: 起動する
 
-LiberNT: Galaxy Edition を最も手早く試せるのは、プリインストール済みディスクです。
+LiberNT: Galaxy Edition を手早く試すなら、CD イメージを使います。
 
-1. `LiberNT.img`（または `LiberNT.vhd`）を展開します
-2. **QEMU** などの仮想マシンで起動するか、VHD を **VirtualBox** または **Hyper-V** 第 1 世代の仮想マシンで使います。Hyper-V 第 2 世代は `LiberNT.vhdx` しか受け付けず、セキュアブートを無効にする必要があります
-3. または、`LiberNT.img` を USB ドライブや SD カードに書き込み、そこからマシンを起動します。UEFI と BIOS のどちらでも起動します
+1. ダウンロードしたファイルを展開して `bootcd.iso` を取り出します
+2. **QEMU** などの仮想マシンで起動するか、これで PC を起動します
 
-> [!CAUTION]
-> `LiberNT.img` を USB ドライブや SD カードに書き込むと、その中身はすべて消去されます。書き込み先のデバイスを必ず確認してください。
+CD から LiberNT: Galaxy Edition を実行するか、LiberNT: Galaxy Edition セットアップを起動します。
 
 ### ステップ 3: LiberNT: Galaxy Edition をインストールする
 
 仮想マシンまたは PC で `bootcd.iso` を起動し、**LiberNT: Galaxy Edition セットアップ**の指示に従います。
-
-プリインストール済みディスクにも LiberNT: Galaxy Edition セットアップが入っています。実行中のシステムから別のディスクに LiberNT: Galaxy Edition をインストールするには、`C:\<アーキテクチャ>\libernt.exe`（たとえば `C:\arm64\libernt.exe`）を実行します。
 
 > [!CAUTION]
 > セットアップはパーティションを削除・フォーマットできます。インストールの前に、インストール先ディスクの大切なデータをバックアップしてください。
@@ -214,16 +208,14 @@ Linux カーネルのものによく似たメニューが開き、ターゲッ�
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 | コマンド | 作成されるもの | 用途 |
 | --- | --- | --- |
 | `ninja bootcd` | `bootcd.iso` | 仮想マシンまたは PC で、CD イメージから LiberNT: Galaxy Edition をインストールする。 |
-| `ninja liberntimg` | `LiberNT.img` | LiberNT: Galaxy Edition がインストール済みのディスクを起動する。QEMU などの仮想マシンで起動するか、USB ドライブや SD カードに書き込みます。UEFI と BIOS のどちらでも起動します。 |
-| `ninja liberntvhd` | `LiberNT.vhd`、`LiberNT.vhdx` | 同じプリインストール済みディスクを仮想マシンで使う。VHD は VirtualBox と Hyper-V 第 1 世代で、VHDX は VHD ディスクを受け付けない Hyper-V 第 2 世代で使います。 |
 
-各ターゲットは必要なものをすべて先にビルドし、ファイルは出力フォルダーに書き出されます。
+このターゲットは必要なものをすべて先にビルドし、`bootcd.iso` は出力フォルダーに書き出されます。
 
 ---
 
@@ -266,7 +258,7 @@ LiberNT.Galaxy/
 
 バグの報告や機能の提案は [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) で、ガイドやメモは [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki) で見つけられます。
 
-[CONTRIBUTING.md](CONTRIBUTING.md) と [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md) を参照してください。大きな変更を計画している場合は、先に [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) または [Discord](https://discord.gg/BpcKg7FZ2) で相談してください。
+[CONTRIBUTING.md](CONTRIBUTING.md) と [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md) を参照してください。大きな変更を計画している場合は、先に [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) で相談してください。
 
 > [!WARNING]
 > **法的注意事項:** Microsoft Windows のプロプライエタリなソースコード（流出した Windows NT 3.5、NT 4、2000 のソースコードや Windows Research Kernel を含みますが、これらに限りません）を見たことがある場合、著作権侵害のおそれがあるため、あなたの貢献は受け付けられません。
@@ -309,4 +301,3 @@ LiberNT: Galaxy Edition は **LiberNT コントリビューター**によって�
 - [ウェブサイト](https://libernt.com)
 - [最新のビルドをダウンロード](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- [Discord](https://discord.gg/BpcKg7FZ2) または [Matrix](https://matrix.to/#/#libernt:matrix.org) でチャット

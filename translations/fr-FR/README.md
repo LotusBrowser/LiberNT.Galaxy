@@ -16,8 +16,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#licence)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -85,7 +83,7 @@ LiberNT: Galaxy Edition apporte le matériel et les plateformes modernes à l'ar
 | Fonction | Ce que cela signifie pour vous |
 | --- | --- |
 | **Le 64 bits d'abord** | Le noyau, la HAL et FreeLoader fonctionnent sur amd64, arm64 et riscv64. |
-| **Démarrage UEFI** | Démarre sur un micrologiciel UEFI, avec un framebuffer GOP et un affichage précoce. Le disque préinstallé démarre en UEFI ou en BIOS. |
+| **Démarrage UEFI** | Démarre sur un micrologiciel UEFI, avec un framebuffer GOP et un affichage précoce. |
 | **Bus et stockage modernes** | PCIe, PCI, Plug and Play, USB avec xHCI, SD/eMMC, ainsi que des pilotes de stockage et de bus. |
 | **Prise en charge des cartes** | De vraies cartes, dont le Raspberry Pi et son contrôleur d'E/S RP1. |
 | **Le modèle de pilotes de Windows 11** | Compatibilité Windows 11 (NT10) et travail sur le modèle de pilotes, vérifiés par rapport à Windows 11 lui-même. |
@@ -126,20 +124,16 @@ Chaque compilation de la page [Releases](https://github.com/LotusBrowser/LiberNT
 
 ### Étape 2 : la démarrer
 
-Le moyen le plus rapide d'essayer LiberNT: Galaxy Edition est le disque préinstallé :
+Le moyen le plus rapide d'essayer LiberNT: Galaxy Edition est l'image de CD :
 
-1. Décompressez `LiberNT.img` (ou `LiberNT.vhd`)
-2. Lancez-le dans une machine virtuelle comme **QEMU**, ou utilisez le VHD dans **VirtualBox** ou dans une machine virtuelle **Hyper-V** de génération 1. Hyper-V génération 2 n'accepte que `LiberNT.vhdx`, avec le démarrage sécurisé désactivé
-3. Ou écrivez `LiberNT.img` sur une clé USB ou une carte SD et démarrez la machine dessus. Il démarre en UEFI ou en BIOS
+1. Décompressez le téléchargement pour obtenir `bootcd.iso`
+2. Lancez-la dans une machine virtuelle comme **QEMU**, ou démarrez un PC dessus
 
-> [!CAUTION]
-> Écrire `LiberNT.img` sur une clé USB ou une carte SD efface tout son contenu. Vérifiez bien le périphérique cible avant.
+Elle exécute LiberNT: Galaxy Edition depuis le CD, ou démarre l'installation de LiberNT: Galaxy Edition.
 
 ### Étape 3 : installer LiberNT: Galaxy Edition
 
 Démarrez `bootcd.iso` dans une machine virtuelle ou sur un PC, et suivez les instructions de l'**installation de LiberNT: Galaxy Edition**.
-
-Le disque préinstallé contient aussi l'installation de LiberNT: Galaxy Edition. Lancez `C:\<architecture>\libernt.exe`, par exemple `C:\arm64\libernt.exe`, pour installer LiberNT: Galaxy Edition sur un autre disque depuis le système en cours d'exécution.
 
 > [!CAUTION]
 > L'installation peut supprimer et formater des partitions. Sauvegardez tout ce qui est important sur le disque cible avant d'installer.
@@ -214,16 +208,14 @@ Placez-vous dans le dossier de sortie et lancez Ninja avec la cible voulue :
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 | Commande | Crée | Pour |
 | --- | --- | --- |
 | `ninja bootcd` | `bootcd.iso` | Installer LiberNT: Galaxy Edition depuis une image de CD, dans une machine virtuelle ou sur un PC. |
-| `ninja liberntimg` | `LiberNT.img` | Démarrer un disque où LiberNT: Galaxy Edition est déjà installé. Lancez-le dans une machine virtuelle comme QEMU, ou écrivez-le sur une clé USB ou une carte SD. Il démarre en UEFI ou en BIOS. |
-| `ninja liberntvhd` | `LiberNT.vhd`, `LiberNT.vhdx` | Utiliser le même disque préinstallé dans des machines virtuelles : le VHD dans VirtualBox et Hyper-V génération 1, le VHDX dans Hyper-V génération 2, qui n'accepte pas les disques VHD. |
 
-Chaque cible compile d'abord tout ce dont elle a besoin, et les fichiers sont écrits dans le dossier de sortie.
+La cible compile d'abord tout ce dont elle a besoin, et `bootcd.iso` est écrit dans le dossier de sortie.
 
 ---
 
@@ -266,7 +258,7 @@ LiberNT.Galaxy/
 
 Signalez les bogues et proposez des fonctions dans les [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues), et trouvez des guides et des notes dans le [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki).
 
-Consultez [CONTRIBUTING.md](CONTRIBUTING.md) et [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Si vous prévoyez une modification importante, posez d'abord la question dans les [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) ou sur [Discord](https://discord.gg/BpcKg7FZ2).
+Consultez [CONTRIBUTING.md](CONTRIBUTING.md) et [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Si vous prévoyez une modification importante, posez d'abord la question dans les [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues).
 
 > [!WARNING]
 > **Avis juridique :** si vous avez vu du code source propriétaire de Microsoft Windows (notamment, sans s'y limiter, le code source divulgué de Windows NT 3.5, NT 4 et 2000, et le Windows Research Kernel), votre contribution ne sera pas acceptée en raison d'une possible violation du droit d'auteur.
@@ -309,4 +301,3 @@ LiberNT: Galaxy Edition est développé par les **contributeurs de LiberNT: Gala
 - [Site web](https://libernt.com)
 - [Télécharger la dernière compilation](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- Discutez sur [Discord](https://discord.gg/BpcKg7FZ2) ou sur [Matrix](https://matrix.to/#/#libernt:matrix.org)

@@ -18,8 +18,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#الترخيص)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -87,7 +85,7 @@ LiberNT: Galaxy Edition نظام تشغيل NT حر. والاسم يدل على 
 | الميزة | ما تعنيه لك |
 | --- | --- |
 | **64 بت أولًا** | تعمل النواة وطبقة HAL وFreeLoader على amd64 وarm64 وriscv64. |
-| **الإقلاع عبر UEFI** | يقلع على برامج UEFI الثابتة، مع مخزن إطارات GOP ودعم مبكر للشاشة. ويقلع القرص المثبّت مسبقًا عبر UEFI أو BIOS. |
+| **الإقلاع عبر UEFI** | يقلع على برامج UEFI الثابتة، مع مخزن إطارات GOP ودعم مبكر للشاشة. |
 | **ناقلات وتخزين حديثة** | PCIe وPCI والتوصيل والتشغيل (Plug and Play) وUSB عبر xHCI وSD/eMMC، إضافة إلى برامج تشغيل التخزين والناقلات. |
 | **دعم اللوحات** | لوحات حقيقية، منها Raspberry Pi ووحدة التحكم في الإدخال والإخراج RP1 الخاصة بها. |
 | **نموذج برامج التشغيل في Windows 11** | التوافق مع Windows 11 (NT10) والعمل على نموذج برامج التشغيل، مع التحقق من ذلك مقارنةً بـ Windows 11 نفسه. |
@@ -128,20 +126,16 @@ LiberNT: Galaxy Edition نظام تشغيل NT حر. والاسم يدل على 
 
 ### الخطوة 2: الإقلاع
 
-أسرع طريقة لتجربة LiberNT: Galaxy Edition هي القرص المثبّت مسبقًا:
+أسرع طريقة لتجربة LiberNT: Galaxy Edition هي صورة القرص المضغوط:
 
-1. فك ضغط ‎`LiberNT.img`‎ (أو ‎`LiberNT.vhd`‎)
-2. شغّله في آلة افتراضية مثل **QEMU**، أو استخدم ملف VHD في **VirtualBox** أو في آلة افتراضية **Hyper-V** من الجيل الأول. لا يقبل Hyper-V من الجيل الثاني إلا ‎`LiberNT.vhdx`‎، مع تعطيل الإقلاع الآمن
-3. أو اكتب ‎`LiberNT.img`‎ على وحدة USB أو بطاقة SD وأقلع الجهاز منها. يقلع عبر UEFI أو BIOS
+1. فك ضغط الملف الذي نزّلته لتحصل على ‎`bootcd.iso`‎
+2. شغّله في آلة افتراضية مثل **QEMU**، أو أقلع حاسوبًا منه
 
-> [!CAUTION]
-> كتابة ‎`LiberNT.img`‎ على وحدة USB أو بطاقة SD تمحو كل ما عليها. تحقّق جيدًا من الجهاز الهدف قبل ذلك.
+يشغّل LiberNT: Galaxy Edition من القرص، أو يبدأ برنامج إعداد LiberNT: Galaxy Edition.
 
 ### الخطوة 3: تثبيت LiberNT: Galaxy Edition
 
 أقلع ‎`bootcd.iso`‎ في آلة افتراضية أو على حاسوب، واتبع تعليمات **برنامج إعداد LiberNT: Galaxy Edition**.
-
-يحمل القرص المثبّت مسبقًا أيضًا برنامج إعداد LiberNT: Galaxy Edition. شغّل ‎`C:\<المعمارية>\libernt.exe`‎، مثلًا ‎`C:\arm64\libernt.exe`‎، لتثبيت LiberNT: Galaxy Edition على قرص آخر من النظام قيد التشغيل.
 
 > [!CAUTION]
 > يستطيع برنامج الإعداد حذف الأقسام وتهيئتها. انسخ احتياطيًا كل ما هو مهم على القرص الهدف قبل التثبيت.
@@ -238,7 +232,7 @@ cd LiberNT.Galaxy
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 </div>
@@ -246,10 +240,8 @@ ninja liberntimg
 | الأمر | ينشئ | استخدمه من أجل |
 | --- | --- | --- |
 | ‎`ninja bootcd`‎ | ‎`bootcd.iso`‎ | تثبيت LiberNT: Galaxy Edition من صورة قرص مضغوط، في آلة افتراضية أو على حاسوب. |
-| ‎`ninja liberntimg`‎ | ‎`LiberNT.img`‎ | إقلاع قرص مثبّت عليه LiberNT: Galaxy Edition مسبقًا. شغّله في آلة افتراضية مثل QEMU، أو اكتبه على وحدة USB أو بطاقة SD. يقلع عبر UEFI أو BIOS. |
-| ‎`ninja liberntvhd`‎ | ‎`LiberNT.vhd`‎، ‎`LiberNT.vhdx`‎ | استخدام القرص المثبّت مسبقًا نفسه في الآلات الافتراضية: VHD في VirtualBox وHyper-V من الجيل الأول، وVHDX في Hyper-V من الجيل الثاني الذي لا يقبل أقراص VHD. |
 
-يبني كل هدف أولًا كل ما يحتاجه، وتُكتب الملفات في مجلد الإخراج.
+يبني الهدف أولًا كل ما يحتاجه، ويُكتب ‎`bootcd.iso`‎ في مجلد الإخراج.
 
 ---
 
@@ -296,7 +288,7 @@ LiberNT.Galaxy/
 
 أبلغ عن الأخطاء واقترح الميزات في [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues)، وستجد الأدلة والملاحظات في [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki).
 
-راجع [CONTRIBUTING.md](CONTRIBUTING.md) و[PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). إن كنت تخطط لتغيير كبير، فاسأل أولًا في [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) أو على [Discord](https://discord.gg/BpcKg7FZ2).
+راجع [CONTRIBUTING.md](CONTRIBUTING.md) و[PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). إن كنت تخطط لتغيير كبير، فاسأل أولًا في [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues).
 
 > [!WARNING]
 > **تنبيه قانوني:** إذا كنت قد اطّلعت على الشيفرة المصدرية المملوكة لـ Microsoft Windows (بما في ذلك على سبيل المثال لا الحصر الشيفرة المسرّبة لـ Windows NT 3.5 وNT 4 و2000، وWindows Research Kernel)، فلن تُقبل مساهمتك بسبب احتمال انتهاك حقوق النشر.
@@ -339,6 +331,5 @@ LiberNT: Galaxy Edition مشروع مستقل. وهو غير تابع لشركة
 - [الموقع الإلكتروني](https://libernt.com)
 - [نزّل أحدث نسخة](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- تحدّث معنا على [Discord](https://discord.gg/BpcKg7FZ2) أو [Matrix](https://matrix.to/#/#libernt:matrix.org)
 
 </div>

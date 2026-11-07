@@ -16,8 +16,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#license)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -85,7 +83,7 @@ LiberNT: Galaxy Edition brings modern hardware and platforms to the NT architect
 | Feature | What it means for you |
 | --- | --- |
 | **64-bit first** | The kernel, HAL and FreeLoader run on amd64, arm64 and riscv64. |
-| **UEFI boot** | Boots on UEFI firmware, with a GOP framebuffer and early display support. The preinstalled disk boots with UEFI or BIOS. |
+| **UEFI boot** | Boots on UEFI firmware, with a GOP framebuffer and early display support. |
 | **Modern buses and storage** | PCIe, PCI, Plug and Play, USB with xHCI, SD/eMMC, and storage and bus drivers. |
 | **Board support** | Real boards, including the Raspberry Pi and its RP1 I/O controller. |
 | **The Windows 11 driver model** | Windows 11 (NT10) compatibility and driver-model work, checked against Windows 11 itself. |
@@ -126,20 +124,16 @@ Every build on the [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/rel
 
 ### Step 2: Boot It
 
-The quickest way to try LiberNT: Galaxy Edition is the preinstalled disk:
+The quickest way to try LiberNT: Galaxy Edition is the CD image:
 
-1. Unzip `LiberNT.img` (or `LiberNT.vhd`)
-2. Start it in a virtual machine such as **QEMU**, or use the VHD in **VirtualBox** or a **Hyper-V** Generation 1 virtual machine. Hyper-V Generation 2 takes only `LiberNT.vhdx`, with Secure Boot turned off
-3. Or write `LiberNT.img` to a USB drive or an SD card and boot the machine from it. It boots with UEFI or BIOS
+1. Unzip the download to get `bootcd.iso`
+2. Start it in a virtual machine such as **QEMU**, or boot a PC from it
 
-> [!CAUTION]
-> Writing `LiberNT.img` to a USB drive or an SD card erases everything on it. Double-check the target device first.
+It runs LiberNT: Galaxy Edition from the CD, or starts LiberNT: Galaxy Edition Setup.
 
 ### Step 3: Install LiberNT: Galaxy Edition
 
 Boot `bootcd.iso` in a virtual machine or on a PC, and follow the instructions of **LiberNT: Galaxy Edition Setup**.
-
-The preinstalled disk also carries LiberNT: Galaxy Edition Setup. Run `C:\<architecture>\libernt.exe`, for example `C:\arm64\libernt.exe`, to install LiberNT: Galaxy Edition on another disk from the running system.
 
 > [!CAUTION]
 > Setup can delete and format partitions. Back up anything important on the target disk before you install.
@@ -214,16 +208,14 @@ Go to the output folder and run Ninja with the target you want:
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 | Command | Creates | Use it to |
 | --- | --- | --- |
 | `ninja bootcd` | `bootcd.iso` | Install LiberNT: Galaxy Edition from a CD image, in a virtual machine or on a PC. |
-| `ninja liberntimg` | `LiberNT.img` | Boot a disk with LiberNT: Galaxy Edition already installed. Start it in a virtual machine such as QEMU, or write it to a USB drive or SD card. It boots with UEFI or BIOS. |
-| `ninja liberntvhd` | `LiberNT.vhd`, `LiberNT.vhdx` | Use the same preinstalled disk in virtual machines: the VHD in VirtualBox and Hyper-V Generation 1, the VHDX in Hyper-V Generation 2, which does not take VHD disks. |
 
-Each target builds everything it needs first, and the files are written to the output folder.
+The target builds everything it needs first, and `bootcd.iso` is written to the output folder.
 
 ---
 
@@ -266,7 +258,7 @@ LiberNT.Galaxy/
 
 Report bugs and suggest features in [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues), and find guides and notes in the [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). If you're planning a larger change, ask in [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) or on [Discord](https://discord.gg/BpcKg7FZ2) first.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). If you're planning a larger change, ask in [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) first.
 
 > [!WARNING]
 > **Legal notice:** If you have seen proprietary Microsoft Windows source code (including but not limited to the leaked Windows NT 3.5, NT 4, 2000 source code and the Windows Research Kernel), your contribution won't be accepted because of potential copyright violation.
@@ -309,4 +301,3 @@ LiberNT: Galaxy Edition is built by the **LiberNT contributors**. It was started
 - [Website](https://libernt.com)
 - [Download the latest build](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- Chat on [Discord](https://discord.gg/BpcKg7FZ2) or [Matrix](https://matrix.to/#/#libernt:matrix.org)

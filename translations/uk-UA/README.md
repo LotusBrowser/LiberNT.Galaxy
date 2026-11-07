@@ -16,8 +16,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#ліцензія)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
-[![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
 <img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
 <img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
@@ -85,7 +83,7 @@ LiberNT: Galaxy Edition привносить підтримку сучасног
 | Можливість | Що це означає для вас |
 | --- | --- |
 | **Орієнтація на 64-бітні системи** | Ядро, HAL та FreeLoader працюють на amd64, arm64 та riscv64. |
-| **Завантаження через UEFI** | Завантажується на мікропрограмах UEFI з фреймбуфером GOP та ранньою підтримкою дисплея. Попередньо встановлений диск завантажується як через UEFI, так і через BIOS. |
+| **Завантаження через UEFI** | Завантажується на мікропрограмах UEFI з фреймбуфером GOP та ранньою підтримкою дисплея. |
 | **Сучасні шини та накопичувачі** | PCIe, PCI, Plug and Play, USB з xHCI, SD/eMMC, а також драйвери накопичувачів і шин. |
 | **Підтримка плат** | Реальні плати, включно з Raspberry Pi та його контролером введення-виведення RP1. |
 | **Модель драйверів Windows 11** | Сумісність із Windows 11 (NT10) та реалізація моделі драйверів, перевірені щодо самої Windows 11. |
@@ -126,20 +124,16 @@ LiberNT: Galaxy Edition привносить підтримку сучасног
 
 ### Крок 2: Завантажте систему
 
-Найшвидший спосіб спробувати LiberNT: Galaxy Edition — скористатися попередньо встановленим диском:
+Найшвидший спосіб спробувати LiberNT: Galaxy Edition — образ CD:
 
-1. Розархівуйте `LiberNT.img` (або `LiberNT.vhd`)
-2. Запустіть його у віртуальній машині, як-от **QEMU**, або використовуйте VHD у **VirtualBox** чи у віртуальній машині **Hyper-V** Generation 1. Для Hyper-V Generation 2 використовуйте `LiberNT.vhdx` із вимкненим Secure Boot
-3. Або запишіть `LiberNT.img` на USB-накопичувач чи карту SD і завантажте з нього комп'ютер. Він завантажується через UEFI або BIOS
+1. Розпакуйте завантажений файл, щоб отримати `bootcd.iso`
+2. Запустіть його у віртуальній машині, наприклад **QEMU**, або завантажте з нього ПК
 
-> [!CAUTION]
-> Запис `LiberNT.img` на USB-накопичувач або карту SD стирає всі дані на ній. Обов'язково ретельно перевірте цільовий пристрій перед записом.
+Він запускає LiberNT: Galaxy Edition або інсталятор LiberNT: Galaxy Edition Setup.
 
 ### Крок 3: Встановіть LiberNT: Galaxy Edition
 
 Завантажте `bootcd.iso` у віртуальній машині або на комп'ютері та дотримуйтесь інструкцій **LiberNT: Galaxy Edition Setup**.
-
-Попередньо встановлений диск також містить інсталятор LiberNT: Galaxy Edition Setup. Запустіть `C:\<architecture>\libernt.exe`, наприклад `C:\arm64\libernt.exe`, щоб встановити LiberNT: Galaxy Edition на інший диск із запущеної системи.
 
 > [!CAUTION]
 > Програма встановлення може видаляти та форматувати розділи. Створіть резервну копію всіх важливих даних на цільовому диску перед початком встановлення.
@@ -214,16 +208,14 @@ cd LiberNT.Galaxy
 
 ```sh
 cd output-Clang-amd64-debug
-ninja liberntimg
+ninja bootcd
 ```
 
 | Команда | Створює | Призначення |
 | --- | --- | --- |
 | `ninja bootcd` | `bootcd.iso` | Встановлення LiberNT: Galaxy Edition з образу CD у віртуальній машині або на комп'ютері. |
-| `ninja liberntimg` | `LiberNT.img` | Завантаження диска з уже встановленою LiberNT: Galaxy Edition. Запустіть його у віртуальній машині (наприклад, QEMU) або запишіть на USB-накопичувач чи карту SD. Завантажується через UEFI або BIOS. |
-| `ninja liberntvhd` | `LiberNT.vhd`, `LiberNT.vhdx` | Використання того самого диска у віртуальних машинах: VHD у VirtualBox та Hyper-V Generation 1, VHDX у Hyper-V Generation 2, який не підтримує диски VHD. |
 
-Кожна ціль спочатку збирає все необхідне, і файли записуються у вихідну папку.
+Ціль спочатку збирає все необхідне, і `bootcd.iso` записується у вихідну папку.
 
 ---
 
@@ -266,7 +258,7 @@ LiberNT.Galaxy/
 
 Повідомляйте про помилки та пропонуйте нові можливості в [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues); посібники та нотатки можна знайти у [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki).
 
-Див. [CONTRIBUTING.md](CONTRIBUTING.md) та [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Якщо ви плануєте значні зміни, спершу запитайте про це в [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) або в [Discord](https://discord.gg/BpcKg7FZ2).
+Див. [CONTRIBUTING.md](CONTRIBUTING.md) та [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Якщо ви плануєте значні зміни, спершу запитайте про це в [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues).
 
 > [!WARNING]
 > **Юридичне застереження:** Якщо ви бачили пропрієтарний вихідний код Microsoft Windows (включно з, але не обмежуючись витоками вихідного коду Windows NT 3.5, NT 4, 2000 та Windows Research Kernel), ваш внесок не буде прийнято через потенційне порушення авторських прав.
@@ -309,4 +301,3 @@ LiberNT: Galaxy Edition створюється **авторами LiberNT**. П�
 - [Вебсайт](https://libernt.com)
 - [Завантажити останню збірку](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
-- Спілкування в [Discord](https://discord.gg/BpcKg7FZ2) або [Matrix](https://matrix.to/#/#libernt:matrix.org)
