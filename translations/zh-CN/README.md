@@ -11,7 +11,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
+# [LiberNT: Galaxy Edition](https://browselotus.net)
 ### 自由的 NT 操作系统
 
 **源于对 NT 架构的热爱，兼容 Windows® 11，支持 amd64、arm64 与 riscv64。**
@@ -295,6 +295,7 @@ LiberNT: Galaxy Edition 归 [Lotus](https://github.com/LotusBrowser) 所有并�
 
 - [访问 Lotus 组织](https://github.com/LotusBrowser)
 - [上游项目：LiberNT](https://github.com/LiberNT/LiberNT)
+- [官网](https://browselotus.net)
 - [LiberNT 官网](https://libernt.com)
 - [下载最新构建](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)

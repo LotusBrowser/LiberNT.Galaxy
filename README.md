@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
+# [LiberNT: Galaxy Edition](https://browselotus.net)
 ### A free NT operating system
 
 **Built out of love for the NT architecture. Windows® 11 compatible, for amd64, arm64 and riscv64.**
@@ -293,6 +293,7 @@ LiberNT: Galaxy Edition is owned and maintained by [Lotus](https://github.com/Lo
 
 - [Visit the Lotus organization](https://github.com/LotusBrowser)
 - [Upstream: LiberNT](https://github.com/LiberNT/LiberNT)
+- [Website](https://browselotus.net)
 - [LiberNT website](https://libernt.com)
 - [Download the latest build](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)

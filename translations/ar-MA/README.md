@@ -11,7 +11,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
+# [LiberNT: Galaxy Edition](https://browselotus.net)
 ### نظام تشغيل NT حر
 
 **صُنع حبًّا في معمارية NT. متوافق مع Windows® 11، لمعماريات amd64 وarm64 وriscv64.**
@@ -323,6 +323,7 @@ LiberNT: Galaxy Edition مشروع مستقل. وهو غير تابع لشركة
 
 - [زُر منظمة Lotus](https://github.com/LotusBrowser)
 - [المشروع الأصلي: LiberNT](https://github.com/LiberNT/LiberNT)
+- [الموقع الإلكتروني](https://browselotus.net)
 - [موقع LiberNT الإلكتروني](https://libernt.com)
 - [نزّل أحدث نسخة](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)

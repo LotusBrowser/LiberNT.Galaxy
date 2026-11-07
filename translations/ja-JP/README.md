@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
+# [LiberNT: Galaxy Edition](https://browselotus.net)
 ### 自由な NT オペレーティングシステム
 
 **NT アーキテクチャへの愛から生まれました。Windows® 11 互換、amd64・arm64・riscv64 対応。**
@@ -293,6 +293,7 @@ LiberNT: Galaxy Edition は [Lotus](https://github.com/LotusBrowser) が所有�
 
 - [Lotus オーガニゼーションを見る](https://github.com/LotusBrowser)
 - [アップストリーム: LiberNT](https://github.com/LiberNT/LiberNT)
+- [ウェブサイト](https://browselotus.net)
 - [LiberNT ウェブサイト](https://libernt.com)
 - [最新のビルドをダウンロード](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
