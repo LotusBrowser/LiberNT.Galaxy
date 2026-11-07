@@ -3,33 +3,33 @@
 > 翻译说明：本译文由 AI 初译并排版；术语、代码块、链接与锚点已与英文原版核对，中文术语已经人工核对。如有纰漏，请提交 issue 指出；表述以英文版为准。
 
 <p align="center">
-  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT">
+  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT: Galaxy Edition">
 </p>
 
 > [!IMPORTANT]
-> LiberNT 正在积极开发中。[Releases](https://github.com/LiberNT/LiberNT/releases) 页面上的构建均为用于测试的 Debug 预发布版：请放在虚拟机或备用机上运行，别装到日常使用的电脑上。
+> LiberNT: Galaxy Edition 正在积极开发中。[Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) 页面上的构建均为用于测试的 Debug 预发布版：请放在虚拟机或备用机上运行，别装到日常使用的电脑上。
 
 <div align="center">
 
-# [LiberNT](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://libernt.com)
 ### 自由的 NT 操作系统
 
 **源于对 NT 架构的热爱，兼容 Windows® 11，支持 amd64、arm64 与 riscv64。**
 
-[![Build](https://img.shields.io/github/actions/workflow/status/LiberNT/LiberNT/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LiberNT/LiberNT/actions/workflows/build.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#许可证)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
 [![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
-<img src="https://img.shields.io/github/repo-size/LiberNT/LiberNT?style=flat-square&color=blue" alt="Repo Size">
-<img src="https://img.shields.io/github/stars/LiberNT/LiberNT?style=flat-square&color=yellow" alt="Stars">
-<img src="https://img.shields.io/github/forks/LiberNT/LiberNT?style=flat-square&color=lightgrey" alt="Forks">
-<img src="https://img.shields.io/github/last-commit/LiberNT/LiberNT/main-nt10?style=flat-square&color=green" alt="Last Commit">
-<img src="https://img.shields.io/github/issues/LiberNT/LiberNT?style=flat-square&color=orange" alt="Issues">
+<img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
+<img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
+<img src="https://img.shields.io/github/forks/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=lightgrey" alt="Forks">
+<img src="https://img.shields.io/github/last-commit/LotusBrowser/LiberNT.Galaxy/main-nt10?style=flat-square&color=green" alt="Last Commit">
+<img src="https://img.shields.io/github/issues/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=orange" alt="Issues">
 
 <br>
 
-[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LiberNT/LiberNT/releases)
+[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 
 </div>
 
@@ -44,33 +44,33 @@
 ---
 
 <p align="center">
-  <img width="1000" alt="arm64 上的 LiberNT 桌面" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
+  <img width="1000" alt="arm64 上的 LiberNT: Galaxy Edition 桌面" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
 </p>
 
-<p align="center"><sub>arm64 上的 LiberNT 桌面，运行于 QEMU，构建版本 nt10.0-043-2555</sub></p>
+<p align="center"><sub>arm64 上的 LiberNT: Galaxy Edition 桌面，运行于 QEMU，构建版本 nt10.0-043-2555</sub></p>
 
 ---
 
-LiberNT 是一个自由的 NT 操作系统。名字本身已经说明：*liber* 在拉丁语里意为**自由**。它以**兼容 Windows® 11** 为目标，也为自由发挥和实验性功能留出余地。
+LiberNT: Galaxy Edition 是一个自由的 NT 操作系统。名字本身已经说明：*liber* 在拉丁语里意为**自由**。它以**兼容 Windows® 11** 为目标，也为自由发挥和实验性功能留出余地。
 
-LiberNT 在内核态组件与驱动上投入了大量工作，着眼稳定性与现代硬件，主攻 64 位平台：**amd64、arm64 与 riscv64**。
+LiberNT: Galaxy Edition 在内核态组件与驱动上投入了大量工作，着眼稳定性与现代硬件，主攻 64 位平台：**amd64、arm64 与 riscv64**。
 
 我们希望这套系统长期可维护：**稳定、可靠、高效**，既能跑在嵌入式设备上，也具备现代操作系统应有的完整能力。
 
 > [!NOTE]
-> 初次接触 NT？**NT** 是支撑所有现代 Windows 版本的架构，涵盖内核、驱动模型和系统服务。LiberNT 正是构建在这套架构之上，以 Windows 11 作为对标的参照。
+> 初次接触 NT？**NT** 是支撑所有现代 Windows 版本的架构，涵盖内核、驱动模型和系统服务。LiberNT: Galaxy Edition 正是构建在这套架构之上，以 Windows 11 作为对标的参照。
 
 ---
 
 ## 目录
 
-- [LiberNT 带来了什么](#libernt-带来了什么)
+- [LiberNT: Galaxy Edition 带来了什么](#libernt-galaxy-edition-带来了什么)
 - [支持的平台](#支持的平台)
 - [快速上手](#快速上手)
   - [第 1 步：下载构建](#第-1-步下载构建)
   - [第 2 步：启动](#第-2-步启动)
-  - [第 3 步：安装 LiberNT](#第-3-步安装-libernt)
-- [自行构建 LiberNT](#自行构建-libernt)
+  - [第 3 步：安装 LiberNT: Galaxy Edition](#第-3-步安装-libernt-galaxy-edition)
+- [自行构建 LiberNT: Galaxy Edition](#自行构建-libernt-galaxy-edition)
 - [构建主机](#构建主机)
 - [项目结构](#项目结构)
 - [参与贡献](#参与贡献)
@@ -80,9 +80,9 @@ LiberNT 在内核态组件与驱动上投入了大量工作，着眼稳定性与
 
 ---
 
-## LiberNT 带来了什么
+## LiberNT: Galaxy Edition 带来了什么
 
-LiberNT 将现代硬件与平台引入 NT 架构。
+LiberNT: Galaxy Edition 将现代硬件与平台引入 NT 架构。
 
 | 特性 | 实际作用 |
 | --- | --- |
@@ -92,11 +92,11 @@ LiberNT 将现代硬件与平台引入 NT 架构。
 | **开发板支持** | 面向真实开发板，包括树莓派及其 RP1 I/O 控制器。 |
 | **Windows 11 驱动模型** | 围绕 Windows 11(NT10)的兼容性与驱动模型展开，并与 Windows 11 本身逐项核对。 |
 | **Arm 上的图形与 x86 应用** | 图形驱动模型可搭配 Mesa，WoW64 可搭配 FEX，两者都是可按需开启的构建选项。 |
-| **LiberNT 安装程序** | 磁盘列表的呈现方式与 Windows 安装程序一致，可新建、删除、格式化、压缩和扩展分区，并把 LiberNT 安装到 NTFS 分区，同时创建所需的 EFI 系统分区。 |
+| **LiberNT: Galaxy Edition 安装程序** | 磁盘列表的呈现方式与 Windows 安装程序一致，可新建、删除、格式化、压缩和扩展分区，并把 LiberNT: Galaxy Edition 安装到 NTFS 分区，同时创建所需的 EFI 系统分区。 |
 | **定制构建** | 通过 `menuconfig` 选择目标、编译器和构建类型，逐项开关功能。 |
 
 > [!TIP]
-> [Releases](https://github.com/LiberNT/LiberNT/releases) 页面的每个构建都附有相对上一版的改动说明。
+> [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) 页面的每个构建都附有相对上一版的改动说明。
 
 ---
 
@@ -117,21 +117,18 @@ LiberNT 将现代硬件与平台引入 NT 架构。
 
 ### 第 1 步：下载构建
 
-[Releases](https://github.com/LiberNT/LiberNT/releases) 页面上，每种镜像、每个架构各自打包成一个 ZIP 文件：
+[Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) 页面上，每种镜像、每个架构各自打包成一个 ZIP 文件：
 
 | 文件 | 内容 |
 | --- | --- |
-| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`，可运行 LiberNT 或启动 LiberNT 安装程序的 CD 镜像 |
-| `LiberNT-img-…-<arch>-…zip` | `LiberNT.img`，已装好 LiberNT 的磁盘 |
-| `LiberNT-vhd-…-<arch>-…zip` | `LiberNT.vhd`，同一份预装盘，供基于 VHD 的虚拟机使用 |
-| `LiberNT-vhdx-…-<arch>-…zip` | `LiberNT.vhdx`，同一份预装盘，供 Hyper-V 第二代使用 |
+| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`，可运行 LiberNT: Galaxy Edition 或启动 LiberNT: Galaxy Edition 安装程序的 CD 镜像 |
 
 > [!NOTE]
 > 这些构建由 GitHub Actions 从 `main-nt10` 分支生成，均为 Clang Debug 版本。
 
 ### 第 2 步：启动
 
-想尽快体验 LiberNT，直接用预装盘：
+想尽快体验 LiberNT: Galaxy Edition，直接用预装盘：
 
 1. 解压 `LiberNT.img`(或 `LiberNT.vhd`)
 2. 在 **QEMU** 等虚拟机中启动；VHD 也可用于 **VirtualBox** 或 **Hyper-V** 第一代虚拟机。Hyper-V 第二代只接受 `LiberNT.vhdx`，并需关闭安全启动
@@ -140,11 +137,11 @@ LiberNT 将现代硬件与平台引入 NT 架构。
 > [!CAUTION]
 > 把 `LiberNT.img` 写入 U 盘或 SD 卡会清空盘上的全部数据。操作前请仔细确认目标设备。
 
-### 第 3 步：安装 LiberNT
+### 第 3 步：安装 LiberNT: Galaxy Edition
 
-在虚拟机或 PC 上启动 `bootcd.iso`，按 **LiberNT 安装程序**的提示操作。
+在虚拟机或 PC 上启动 `bootcd.iso`，按 **LiberNT: Galaxy Edition 安装程序**的提示操作。
 
-预装盘里同样带有 LiberNT 安装程序。在运行中的系统里执行 `C:\<architecture>\libernt.exe`，例如 `C:\arm64\libernt.exe`，就能把 LiberNT 装到另一块磁盘。
+预装盘里同样带有 LiberNT: Galaxy Edition 安装程序。在运行中的系统里执行 `C:\<architecture>\libernt.exe`，例如 `C:\arm64\libernt.exe`，就能把 LiberNT: Galaxy Edition 装到另一块磁盘。
 
 > [!CAUTION]
 > 安装程序会删除并格式化分区。安装前请备份目标磁盘上的重要数据。
@@ -153,13 +150,13 @@ LiberNT 将现代硬件与平台引入 NT 架构。
 
 ---
 
-## 自行构建 LiberNT
+## 自行构建 LiberNT: Galaxy Edition
 
-LiberNT 使用 RosBE 交叉编译工具链构建。下面的步骤适用于 Linux 和 macOS，Windows 上可通过 WSL2 完成。
+LiberNT: Galaxy Edition 使用 RosBE 交叉编译工具链构建。下面的步骤适用于 Linux 和 macOS，Windows 上可通过 WSL2 完成。
 
 ### 1. 安装工具链
 
-本机需要 Git、CMake、Ninja 和一套 C/C++ 编译器；构建 LiberNT 所需的交叉编译器由 RosBE 提供。
+本机需要 Git、CMake、Ninja 和一套 C/C++ 编译器；构建 LiberNT: Galaxy Edition 所需的交叉编译器由 RosBE 提供。
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/main/rosbe-unix-bootstrap.sh | sh
@@ -171,8 +168,8 @@ curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/mai
 ### 2. 获取源码
 
 ```sh
-git clone https://github.com/LiberNT/LiberNT.git
-cd LiberNT
+git clone https://github.com/LotusBrowser/LiberNT.Galaxy.git
+cd LiberNT.Galaxy
 ```
 
 > [!NOTE]
@@ -224,8 +221,8 @@ ninja liberntimg
 
 | 命令 | 生成 | 用途 |
 | --- | --- | --- |
-| `ninja bootcd` | `bootcd.iso` | 在虚拟机或 PC 上从 CD 镜像安装 LiberNT。 |
-| `ninja liberntimg` | `LiberNT.img` | 启动一块已装好 LiberNT 的磁盘。可在 QEMU 等虚拟机中运行，也可写入 U 盘或 SD 卡；UEFI 与 BIOS 均可启动。 |
+| `ninja bootcd` | `bootcd.iso` | 在虚拟机或 PC 上从 CD 镜像安装 LiberNT: Galaxy Edition。 |
+| `ninja liberntimg` | `LiberNT.img` | 启动一块已装好 LiberNT: Galaxy Edition 的磁盘。可在 QEMU 等虚拟机中运行，也可写入 U 盘或 SD 卡；UEFI 与 BIOS 均可启动。 |
 | `ninja liberntvhd` | `LiberNT.vhd`、`LiberNT.vhdx` | 在虚拟机里复用同一份预装盘：VHD 用于 VirtualBox 和 Hyper-V 第一代，VHDX 用于 Hyper-V 第二代(该代不支持 VHD)。 |
 
 每个目标都会先把它依赖的内容构建好，产物统一写入输出目录。
@@ -247,7 +244,7 @@ ninja liberntimg
 ## 项目结构
 
 ```text
-LiberNT/
+LiberNT.Galaxy/
 ├── base/            # 应用、服务、安装程序与 shell
 ├── boot/            # FreeLoader、启动数据与启动镜像
 ├── bootloader/      # 启动管理器、Windows 加载器、UEFI 与 Open Firmware 支持
@@ -269,9 +266,9 @@ LiberNT/
 
 ## 参与贡献
 
-问题反馈和功能建议请提交到 [Issues](https://github.com/LiberNT/LiberNT/issues)，指南与笔记见 [Wiki](https://github.com/LiberNT/LiberNT/wiki)。
+问题反馈和功能建议请提交到 [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues)，指南与笔记见 [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)。
 
-动手前请阅读 [CONTRIBUTING.md](../../CONTRIBUTING.md) 和 [PULL_REQUEST_MANAGEMENT.md](../../PULL_REQUEST_MANAGEMENT.md)。如果打算做较大的改动，建议先在 [Issues](https://github.com/LiberNT/LiberNT/issues) 或 [Discord](https://discord.gg/BpcKg7FZ2) 上讨论。
+动手前请阅读 [CONTRIBUTING.md](../../CONTRIBUTING.md) 和 [PULL_REQUEST_MANAGEMENT.md](../../PULL_REQUEST_MANAGEMENT.md)。如果打算做较大的改动，建议先在 [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) 或 [Discord](https://discord.gg/BpcKg7FZ2) 上讨论。
 
 > [!WARNING]
 > **法律声明：** 如果你接触过微软 Windows 的专有源码(包括但不限于泄露的 Windows NT 3.5、NT 4、2000 源码以及 Windows Research Kernel)，由于存在版权风险，你的贡献将无法被接受。
@@ -280,7 +277,7 @@ LiberNT/
 
 ## 关于 AI 的使用
 
-先说清楚：AI 是 LiberNT 开发方式的一部分。它协助我们审查和编写代码，写出的内容随后由人工复核。任何改动进入主分支之前，都会有人运行并验证端到端测试。我们对这个项目足够上心，回归问题必须挡在合并之前。
+先说清楚：AI 是 LiberNT: Galaxy Edition 开发方式的一部分。它协助我们审查和编写代码，写出的内容随后由人工复核。任何改动进入主分支之前，都会有人运行并验证端到端测试。我们对这个项目足够上心，回归问题必须挡在合并之前。
 
 AI 还帮我们读文档、提取定义、修复缺陷。遇到具体缺陷时，它会拿 Microsoft Learn 官方文档与函数的实际行为对照，把差异定位到具体位置。
 
@@ -298,20 +295,20 @@ AI 还帮我们读文档、提取定义、修复缺陷。遇到具体缺陷时�
 
 ## 许可证
 
-LiberNT 以 [GNU GPL 3.0](../../COPYING) 授权。沿用自其他项目的代码保留其文件头声明的许可证，大多为 GPL 2.0 或更高版本。这些文件引用的 GPL 2.0、LGPL 2.1 和 BSD 文本见 [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB) 和 [COPYING.ARM](../../COPYING.ARM)。
+LiberNT: Galaxy Edition 以 [GNU GPL 3.0](../../COPYING) 授权。沿用自其他项目的代码保留其文件头声明的许可证，大多为 GPL 2.0 或更高版本。这些文件引用的 GPL 2.0、LGPL 2.1 和 BSD 文本见 [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB) 和 [COPYING.ARM](../../COPYING.ARM)。
 
-LiberNT 中的改动版权归 LiberNT 贡献者所有，© 2026。沿用代码与第三方代码保留原作者的版权声明。详见 [CREDITS.md](../../CREDITS.md)。
+LiberNT: Galaxy Edition 中的改动版权归 LiberNT 贡献者所有，© 2026。沿用代码与第三方代码保留原作者的版权声明。详见 [CREDITS.md](../../CREDITS.md)。
 
-LiberNT 是独立项目，与 Microsoft 没有隶属、认可或赞助关系。Windows® 是 Microsoft Corporation 的注册商标。
+LiberNT: Galaxy Edition 是独立项目，与 Microsoft 没有隶属、认可或赞助关系。Windows® 是 Microsoft Corporation 的注册商标。
 
 ---
 
 ## 关于
 
-LiberNT 由 **LiberNT 贡献者**共同构建，由 [Ahmed Arif](https://github.com/ahmedarif193) 发起，由 [Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre) 和 [Vivyy](https://github.com/enginelesscc) 维护。
+LiberNT: Galaxy Edition 由 **LiberNT 贡献者**共同构建，由 [Ahmed Arif](https://github.com/ahmedarif193) 发起，由 [Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre) 和 [Vivyy](https://github.com/enginelesscc) 维护。
 
 - [访问 LiberNT 组织](https://github.com/LiberNT)
 - [官网](https://libernt.com)
-- [下载最新构建](https://github.com/LiberNT/LiberNT/releases)
-- [Wiki](https://github.com/LiberNT/LiberNT/wiki)
+- [下载最新构建](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
+- [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
 - 在 [Discord](https://discord.gg/BpcKg7FZ2) 或 [Matrix](https://matrix.to/#/#libernt:matrix.org) 上交流

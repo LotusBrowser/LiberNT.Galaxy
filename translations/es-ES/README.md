@@ -1,33 +1,33 @@
 > [English](../../README.md) | [中文](../zh-CN/README.md) | [Français](../fr-FR/README.md) | **Español** | [日本語](../ja-JP/README.md) | [العربية](../ar-MA/README.md) | [Українська](../uk-UA/README.md)
 
 <p align="center">
-  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT">
+  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT: Galaxy Edition">
 </p>
 
 > [!IMPORTANT]
-> LiberNT está en pleno desarrollo. Las compilaciones de la página [Releases](https://github.com/LiberNT/LiberNT/releases) son versiones preliminares Debug para pruebas: ejecútalas en una máquina virtual o en un equipo de repuesto, no en un ordenador del que dependas.
+> LiberNT: Galaxy Edition está en pleno desarrollo. Las compilaciones de la página [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) son versiones preliminares Debug para pruebas: ejecútalas en una máquina virtual o en un equipo de repuesto, no en un ordenador del que dependas.
 
 <div align="center">
 
-# [LiberNT](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://libernt.com)
 ### Un sistema operativo NT libre
 
 **Creado por amor a la arquitectura NT. Compatible con Windows® 11, para amd64, arm64 y riscv64.**
 
-[![Build](https://img.shields.io/github/actions/workflow/status/LiberNT/LiberNT/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LiberNT/LiberNT/actions/workflows/build.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#licencia)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
 [![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
-<img src="https://img.shields.io/github/repo-size/LiberNT/LiberNT?style=flat-square&color=blue" alt="Repo Size">
-<img src="https://img.shields.io/github/stars/LiberNT/LiberNT?style=flat-square&color=yellow" alt="Stars">
-<img src="https://img.shields.io/github/forks/LiberNT/LiberNT?style=flat-square&color=lightgrey" alt="Forks">
-<img src="https://img.shields.io/github/last-commit/LiberNT/LiberNT/main-nt10?style=flat-square&color=green" alt="Last Commit">
-<img src="https://img.shields.io/github/issues/LiberNT/LiberNT?style=flat-square&color=orange" alt="Issues">
+<img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
+<img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
+<img src="https://img.shields.io/github/forks/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=lightgrey" alt="Forks">
+<img src="https://img.shields.io/github/last-commit/LotusBrowser/LiberNT.Galaxy/main-nt10?style=flat-square&color=green" alt="Last Commit">
+<img src="https://img.shields.io/github/issues/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=orange" alt="Issues">
 
 <br>
 
-[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LiberNT/LiberNT/releases)
+[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 
 </div>
 
@@ -42,33 +42,33 @@
 ---
 
 <p align="center">
-  <img width="1000" alt="El escritorio de LiberNT en arm64" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
+  <img width="1000" alt="El escritorio de LiberNT: Galaxy Edition en arm64" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
 </p>
 
-<p align="center"><sub>El escritorio de LiberNT en arm64, de la compilación nt10.0-043-2555 en QEMU</sub></p>
+<p align="center"><sub>El escritorio de LiberNT: Galaxy Edition en arm64, de la compilación nt10.0-043-2555 en QEMU</sub></p>
 
 ---
 
-LiberNT es un sistema operativo NT libre. El nombre lo dice: *liber* significa **libre** en latín. Su objetivo es la **compatibilidad con Windows® 11**, con espacio para funciones libres y experimentales.
+LiberNT: Galaxy Edition es un sistema operativo NT libre. El nombre lo dice: *liber* significa **libre** en latín. Su objetivo es la **compatibilidad con Windows® 11**, con espacio para funciones libres y experimentales.
 
-LiberNT aporta un trabajo extenso sobre los componentes del espacio del kernel y los controladores, orientado a la estabilidad y al hardware moderno, y se centra en las plataformas de 64 bits: **amd64, arm64 y riscv64**.
+LiberNT: Galaxy Edition aporta un trabajo extenso sobre los componentes del espacio del kernel y los controladores, orientado a la estabilidad y al hardware moderno, y se centra en las plataformas de 64 bits: **amd64, arm64 y riscv64**.
 
 Nuestro objetivo es un sistema que se pueda mantener a largo plazo: **estable, fiable y eficiente**, que funcione también en dispositivos embebidos y que pueda ofrecer todas las funciones que debe tener un sistema operativo moderno.
 
 > [!NOTE]
-> ¿Nuevo en NT? **NT** es la arquitectura que hay detrás de todas las versiones modernas de Windows: su kernel, su modelo de controladores y sus servicios del sistema. LiberNT es un sistema operativo libre construido sobre esa arquitectura, y Windows 11 es la referencia con la que se compara.
+> ¿Nuevo en NT? **NT** es la arquitectura que hay detrás de todas las versiones modernas de Windows: su kernel, su modelo de controladores y sus servicios del sistema. LiberNT: Galaxy Edition es un sistema operativo libre construido sobre esa arquitectura, y Windows 11 es la referencia con la que se compara.
 
 ---
 
 ## Índice
 
-- [Qué incluye LiberNT](#qué-incluye-libernt)
+- [Qué incluye LiberNT: Galaxy Edition](#qué-incluye-libernt-galaxy-edition)
 - [Plataformas compatibles](#plataformas-compatibles)
 - [Primeros pasos](#primeros-pasos)
   - [Paso 1: descargar una compilación](#paso-1-descargar-una-compilación)
   - [Paso 2: arrancarla](#paso-2-arrancarla)
-  - [Paso 3: instalar LiberNT](#paso-3-instalar-libernt)
-- [Compilar LiberNT por tu cuenta](#compilar-libernt-por-tu-cuenta)
+  - [Paso 3: instalar LiberNT: Galaxy Edition](#paso-3-instalar-libernt-galaxy-edition)
+- [Compilar LiberNT: Galaxy Edition por tu cuenta](#compilar-libernt-galaxy-edition-por-tu-cuenta)
 - [Sistemas de compilación](#sistemas-de-compilación)
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Contribuir](#contribuir)
@@ -78,9 +78,9 @@ Nuestro objetivo es un sistema que se pueda mantener a largo plazo: **estable, f
 
 ---
 
-## Qué incluye LiberNT
+## Qué incluye LiberNT: Galaxy Edition
 
-LiberNT lleva el hardware y las plataformas modernas a la arquitectura NT.
+LiberNT: Galaxy Edition lleva el hardware y las plataformas modernas a la arquitectura NT.
 
 | Función | Lo que significa para ti |
 | --- | --- |
@@ -90,11 +90,11 @@ LiberNT lleva el hardware y las plataformas modernas a la arquitectura NT.
 | **Soporte de placas** | Placas reales, incluida la Raspberry Pi y su controlador de E/S RP1. |
 | **El modelo de controladores de Windows 11** | Compatibilidad con Windows 11 (NT10) y trabajo sobre el modelo de controladores, comprobado con el propio Windows 11. |
 | **Gráficos y aplicaciones x86 en Arm** | El modelo de controladores gráficos con Mesa, y WoW64 con FEX, son opciones de compilación que puedes activar. |
-| **Instalación de LiberNT** | Muestra las unidades igual que el instalador de Windows, crea, elimina, formatea, reduce y amplía particiones, e instala LiberNT en NTFS con la partición del sistema EFI que necesita. |
+| **Instalación de LiberNT: Galaxy Edition** | Muestra las unidades igual que el instalador de Windows, crea, elimina, formatea, reduce y amplía particiones, e instala LiberNT: Galaxy Edition en NTFS con la partición del sistema EFI que necesita. |
 | **Tu propia compilación** | `menuconfig` te permite elegir el destino, el compilador y el tipo de compilación, y activar o desactivar funciones. |
 
 > [!TIP]
-> Cada compilación de la página [Releases](https://github.com/LiberNT/LiberNT/releases) indica qué ha cambiado desde la anterior.
+> Cada compilación de la página [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) indica qué ha cambiado desde la anterior.
 
 ---
 
@@ -115,21 +115,18 @@ Las compilaciones publicadas también incluyen imágenes para PowerPC.
 
 ### Paso 1: descargar una compilación
 
-Cada compilación de la página [Releases](https://github.com/LiberNT/LiberNT/releases) se ofrece como un archivo ZIP por imagen y arquitectura:
+Cada compilación de la página [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) se ofrece como un archivo ZIP por imagen y arquitectura:
 
 | Archivo | Qué es |
 | --- | --- |
-| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`, una imagen de CD que ejecuta LiberNT o inicia la instalación de LiberNT |
-| `LiberNT-img-…-<arch>-…zip` | `LiberNT.img`, un disco con LiberNT ya instalado |
-| `LiberNT-vhd-…-<arch>-…zip` | `LiberNT.vhd`, el mismo disco preinstalado para máquinas virtuales basadas en VHD |
-| `LiberNT-vhdx-…-<arch>-…zip` | `LiberNT.vhdx`, el mismo disco preinstalado para Hyper-V de generación 2 |
+| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`, una imagen de CD que ejecuta LiberNT: Galaxy Edition o inicia la instalación de LiberNT: Galaxy Edition |
 
 > [!NOTE]
 > Son compilaciones Debug con Clang, generadas por GitHub Actions a partir de la rama `main-nt10`.
 
 ### Paso 2: arrancarla
 
-La forma más rápida de probar LiberNT es el disco preinstalado:
+La forma más rápida de probar LiberNT: Galaxy Edition es el disco preinstalado:
 
 1. Descomprime `LiberNT.img` (o `LiberNT.vhd`)
 2. Inícialo en una máquina virtual como **QEMU**, o usa el VHD en **VirtualBox** o en una máquina virtual **Hyper-V** de generación 1. Hyper-V de generación 2 solo acepta `LiberNT.vhdx`, con el arranque seguro desactivado
@@ -138,11 +135,11 @@ La forma más rápida de probar LiberNT es el disco preinstalado:
 > [!CAUTION]
 > Escribir `LiberNT.img` en una unidad USB o una tarjeta SD borra todo su contenido. Comprueba bien el dispositivo de destino antes.
 
-### Paso 3: instalar LiberNT
+### Paso 3: instalar LiberNT: Galaxy Edition
 
-Arranca `bootcd.iso` en una máquina virtual o en un PC y sigue las instrucciones de la **instalación de LiberNT**.
+Arranca `bootcd.iso` en una máquina virtual o en un PC y sigue las instrucciones de la **instalación de LiberNT: Galaxy Edition**.
 
-El disco preinstalado también incluye la instalación de LiberNT. Ejecuta `C:\<arquitectura>\libernt.exe`, por ejemplo `C:\arm64\libernt.exe`, para instalar LiberNT en otro disco desde el sistema en ejecución.
+El disco preinstalado también incluye la instalación de LiberNT: Galaxy Edition. Ejecuta `C:\<arquitectura>\libernt.exe`, por ejemplo `C:\arm64\libernt.exe`, para instalar LiberNT: Galaxy Edition en otro disco desde el sistema en ejecución.
 
 > [!CAUTION]
 > La instalación puede eliminar y formatear particiones. Haz una copia de seguridad de todo lo importante del disco de destino antes de instalar.
@@ -151,13 +148,13 @@ Consulta [INSTALL.md](INSTALL.md) para ver la guía de instalación completa.
 
 ---
 
-## Compilar LiberNT por tu cuenta
+## Compilar LiberNT: Galaxy Edition por tu cuenta
 
-LiberNT se compila con RosBE, una cadena de herramientas de compilación cruzada. Los pasos siguientes funcionan en Linux y macOS, y en Windows a través de WSL2.
+LiberNT: Galaxy Edition se compila con RosBE, una cadena de herramientas de compilación cruzada. Los pasos siguientes funcionan en Linux y macOS, y en Windows a través de WSL2.
 
 ### 1. Instalar la cadena de herramientas
 
-Necesitas Git, CMake, Ninja y un compilador de C/C++ para tu propio equipo. RosBE añade los compiladores que compilan LiberNT.
+Necesitas Git, CMake, Ninja y un compilador de C/C++ para tu propio equipo. RosBE añade los compiladores que compilan LiberNT: Galaxy Edition.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/main/rosbe-unix-bootstrap.sh | sh
@@ -169,8 +166,8 @@ curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/mai
 ### 2. Obtener el código fuente
 
 ```sh
-git clone https://github.com/LiberNT/LiberNT.git
-cd LiberNT
+git clone https://github.com/LotusBrowser/LiberNT.Galaxy.git
+cd LiberNT.Galaxy
 ```
 
 > [!NOTE]
@@ -222,8 +219,8 @@ ninja liberntimg
 
 | Comando | Crea | Sirve para |
 | --- | --- | --- |
-| `ninja bootcd` | `bootcd.iso` | Instalar LiberNT desde una imagen de CD, en una máquina virtual o en un PC. |
-| `ninja liberntimg` | `LiberNT.img` | Arrancar un disco con LiberNT ya instalado. Inícialo en una máquina virtual como QEMU, o escríbelo en una unidad USB o una tarjeta SD. Arranca con UEFI o BIOS. |
+| `ninja bootcd` | `bootcd.iso` | Instalar LiberNT: Galaxy Edition desde una imagen de CD, en una máquina virtual o en un PC. |
+| `ninja liberntimg` | `LiberNT.img` | Arrancar un disco con LiberNT: Galaxy Edition ya instalado. Inícialo en una máquina virtual como QEMU, o escríbelo en una unidad USB o una tarjeta SD. Arranca con UEFI o BIOS. |
 | `ninja liberntvhd` | `LiberNT.vhd`, `LiberNT.vhdx` | Usar el mismo disco preinstalado en máquinas virtuales: el VHD en VirtualBox y en Hyper-V de generación 1, el VHDX en Hyper-V de generación 2, que no acepta discos VHD. |
 
 Cada destino compila primero todo lo que necesita, y los archivos se escriben en la carpeta de salida.
@@ -245,7 +242,7 @@ En todos los sistemas, instala Git, CMake, Ninja, Flex y Bison con tu gestor de 
 ## Estructura del proyecto
 
 ```text
-LiberNT/
+LiberNT.Galaxy/
 ├── base/            # Aplicaciones, servicios, instalación y el shell
 ├── boot/            # FreeLoader, datos de arranque e imágenes de arranque
 ├── bootloader/      # Gestor de arranque, cargador de Windows, soporte de UEFI y Open Firmware
@@ -267,9 +264,9 @@ LiberNT/
 
 ## Contribuir
 
-Informa de errores y propón funciones en [Issues](https://github.com/LiberNT/LiberNT/issues), y encuentra guías y notas en la [Wiki](https://github.com/LiberNT/LiberNT/wiki).
+Informa de errores y propón funciones en [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues), y encuentra guías y notas en la [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki).
 
-Consulta [CONTRIBUTING.md](CONTRIBUTING.md) y [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Si planeas un cambio grande, pregunta antes en [Issues](https://github.com/LiberNT/LiberNT/issues) o en [Discord](https://discord.gg/BpcKg7FZ2).
+Consulta [CONTRIBUTING.md](CONTRIBUTING.md) y [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md). Si planeas un cambio grande, pregunta antes en [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) o en [Discord](https://discord.gg/BpcKg7FZ2).
 
 > [!WARNING]
 > **Aviso legal:** si has visto código fuente propietario de Microsoft Windows (incluido, entre otros, el código filtrado de Windows NT 3.5, NT 4 y 2000, y el Windows Research Kernel), tu contribución no se aceptará por una posible infracción de derechos de autor.
@@ -278,7 +275,7 @@ Consulta [CONTRIBUTING.md](CONTRIBUTING.md) y [PULL_REQUEST_MANAGEMENT.md](PULL_
 
 ## Uso de la IA
 
-Queremos dejarlo claro: la IA forma parte de cómo se construye LiberNT. Nos ayuda a revisar y escribir código, y todo lo que escribe lo revisa después una persona. Antes de que algo llegue a la rama principal, una persona ejecuta y valida las pruebas de extremo a extremo. Nos importa demasiado este proyecto como para dejar pasar una regresión.
+Queremos dejarlo claro: la IA forma parte de cómo se construye LiberNT: Galaxy Edition. Nos ayuda a revisar y escribir código, y todo lo que escribe lo revisa después una persona. Antes de que algo llegue a la rama principal, una persona ejecuta y valida las pruebas de extremo a extremo. Nos importa demasiado este proyecto como para dejar pasar una regresión.
 
 También nos ayuda a leer documentación, extraer definiciones y corregir errores. Para cada error, compara lo que dice la documentación oficial de Microsoft Learn con lo que hace realmente nuestra función, para que veamos exactamente dónde difiere nuestro comportamiento.
 
@@ -296,20 +293,20 @@ Como cualquier otra herramienta, la IA está ahí para ayudarnos a lograr nuestr
 
 ## Licencia
 
-LiberNT se distribuye bajo la [GNU GPL 3.0](../../COPYING). El código heredado de otros proyectos conserva la licencia indicada en la cabecera de sus archivos, en su mayoría GPL 2.0 o posterior. Los textos de la GPL 2.0, la LGPL 2.1 y la licencia BSD a los que hacen referencia esos archivos están en [COPYING2](../../COPYING2), [COPYING.LIB](../../COPYING.LIB) y [COPYING.ARM](../../COPYING.ARM).
+LiberNT: Galaxy Edition se distribuye bajo la [GNU GPL 3.0](../../COPYING). El código heredado de otros proyectos conserva la licencia indicada en la cabecera de sus archivos, en su mayoría GPL 2.0 o posterior. Los textos de la GPL 2.0, la LGPL 2.1 y la licencia BSD a los que hacen referencia esos archivos están en [COPYING2](../../COPYING2), [COPYING.LIB](../../COPYING.LIB) y [COPYING.ARM](../../COPYING.ARM).
 
-Los cambios realizados en LiberNT son Copyright © 2026 de los colaboradores de LiberNT. El código heredado y de terceros conserva los avisos de copyright de sus autores. Consulta [CREDITS.md](../../CREDITS.md).
+Los cambios realizados en LiberNT: Galaxy Edition son Copyright © 2026 de los colaboradores de LiberNT. El código heredado y de terceros conserva los avisos de copyright de sus autores. Consulta [CREDITS.md](../../CREDITS.md).
 
-LiberNT es un proyecto independiente. No está afiliado a Microsoft, ni respaldado ni patrocinado por ella. Windows® es una marca registrada de Microsoft Corporation.
+LiberNT: Galaxy Edition es un proyecto independiente. No está afiliado a Microsoft, ni respaldado ni patrocinado por ella. Windows® es una marca registrada de Microsoft Corporation.
 
 ---
 
 ## Acerca de
 
-LiberNT lo construyen los **colaboradores de LiberNT**; lo inició [Ahmed Arif](https://github.com/ahmedarif193) y lo mantienen [Ahmed Arif](https://github.com/ahmedarif193), [Ostap Brehin](https://github.com/osbre) y [Vivyy](https://github.com/enginelesscc).
+LiberNT: Galaxy Edition lo construyen los **colaboradores de LiberNT: Galaxy Edition**; lo inició [Ahmed Arif](https://github.com/ahmedarif193) y lo mantienen [Ahmed Arif](https://github.com/ahmedarif193), [Ostap Brehin](https://github.com/osbre) y [Vivyy](https://github.com/enginelesscc).
 
 - [Visita la organización LiberNT](https://github.com/LiberNT)
 - [Sitio web](https://libernt.com)
-- [Descarga la última compilación](https://github.com/LiberNT/LiberNT/releases)
-- [Wiki](https://github.com/LiberNT/LiberNT/wiki)
+- [Descarga la última compilación](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
+- [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
 - Chatea en [Discord](https://discord.gg/BpcKg7FZ2) o en [Matrix](https://matrix.to/#/#libernt:matrix.org)

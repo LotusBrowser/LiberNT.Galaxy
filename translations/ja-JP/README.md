@@ -1,33 +1,33 @@
 > [English](../../README.md) | [中文](../zh-CN/README.md) | [Français](../fr-FR/README.md) | [Español](../es-ES/README.md) | **日本語** | [العربية](../ar-MA/README.md) | [Українська](../uk-UA/README.md)
 
 <p align="center">
-  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT">
+  <img src="../../media/graphics/branding/libernt-banner.png" width="480" alt="LiberNT: Galaxy Edition">
 </p>
 
 > [!IMPORTANT]
-> LiberNT は活発に開発中です。[Releases](https://github.com/LiberNT/LiberNT/releases) ページのビルドはテスト用の Debug プレリリースです。仮想マシンや予備のハードウェアで実行し、普段使いのコンピューターでは実行しないでください。
+> LiberNT: Galaxy Edition は活発に開発中です。[Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) ページのビルドはテスト用の Debug プレリリースです。仮想マシンや予備のハードウェアで実行し、普段使いのコンピューターでは実行しないでください。
 
 <div align="center">
 
-# [LiberNT](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://libernt.com)
 ### 自由な NT オペレーティングシステム
 
 **NT アーキテクチャへの愛から生まれました。Windows® 11 互換、amd64・arm64・riscv64 対応。**
 
-[![Build](https://img.shields.io/github/actions/workflow/status/LiberNT/LiberNT/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LiberNT/LiberNT/actions/workflows/build.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/LotusBrowser/LiberNT.Galaxy/build.yml?branch=main-nt10&label=Build&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/actions/workflows/build.yml)
 [![License: GPL 3.0](https://img.shields.io/badge/License-GPL_3.0-0161B6?style=for-the-badge&logo=gnu&logoColor=white)](#ライセンス)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/BpcKg7FZ2)
 [![Matrix](https://img.shields.io/badge/Matrix-%23libernt-000000?style=for-the-badge&logo=matrix&logoColor=white)](https://matrix.to/#/#libernt:matrix.org)
 
-<img src="https://img.shields.io/github/repo-size/LiberNT/LiberNT?style=flat-square&color=blue" alt="Repo Size">
-<img src="https://img.shields.io/github/stars/LiberNT/LiberNT?style=flat-square&color=yellow" alt="Stars">
-<img src="https://img.shields.io/github/forks/LiberNT/LiberNT?style=flat-square&color=lightgrey" alt="Forks">
-<img src="https://img.shields.io/github/last-commit/LiberNT/LiberNT/main-nt10?style=flat-square&color=green" alt="Last Commit">
-<img src="https://img.shields.io/github/issues/LiberNT/LiberNT?style=flat-square&color=orange" alt="Issues">
+<img src="https://img.shields.io/github/repo-size/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=blue" alt="Repo Size">
+<img src="https://img.shields.io/github/stars/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=yellow" alt="Stars">
+<img src="https://img.shields.io/github/forks/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=lightgrey" alt="Forks">
+<img src="https://img.shields.io/github/last-commit/LotusBrowser/LiberNT.Galaxy/main-nt10?style=flat-square&color=green" alt="Last Commit">
+<img src="https://img.shields.io/github/issues/LotusBrowser/LiberNT.Galaxy?style=flat-square&color=orange" alt="Issues">
 
 <br>
 
-[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LiberNT/LiberNT/releases)
+[![Download the latest build](https://img.shields.io/badge/Download-Latest_build-0161B6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 
 </div>
 
@@ -42,33 +42,33 @@
 ---
 
 <p align="center">
-  <img width="1000" alt="arm64 上の LiberNT デスクトップ" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
+  <img width="1000" alt="arm64 上の LiberNT: Galaxy Edition デスクトップ" src="../../media/graphics/screenshots/libernt-desktop-arm64.png">
 </p>
 
-<p align="center"><sub>arm64 上の LiberNT デスクトップ。QEMU で実行したビルド nt10.0-043-2555</sub></p>
+<p align="center"><sub>arm64 上の LiberNT: Galaxy Edition デスクトップ。QEMU で実行したビルド nt10.0-043-2555</sub></p>
 
 ---
 
-LiberNT は自由な NT オペレーティングシステムです。名前がそれを表しています。*liber* はラテン語で**自由**を意味します。**Windows® 11 との互換性**を目標とし、自由で実験的な機能の余地も残しています。
+LiberNT: Galaxy Edition は自由な NT オペレーティングシステムです。名前がそれを表しています。*liber* はラテン語で**自由**を意味します。**Windows® 11 との互換性**を目標とし、自由で実験的な機能の余地も残しています。
 
-LiberNT はカーネル空間のコンポーネントとドライバーに大規模な改良を加えており、安定性と最新のハードウェアを重視し、64 ビットプラットフォーム（**amd64・arm64・riscv64**）に注力しています。
+LiberNT: Galaxy Edition はカーネル空間のコンポーネントとドライバーに大規模な改良を加えており、安定性と最新のハードウェアを重視し、64 ビットプラットフォーム（**amd64・arm64・riscv64**）に注力しています。
 
 私たちの目標は、長期にわたって保守できるシステムです。**安定していて、信頼でき、効率的**で、組み込み機器でも動作し、最新のオペレーティングシステムが備えるべきあらゆる機能をサポートできるシステムを目指しています。
 
 > [!NOTE]
-> NT は初めてですか？ **NT** は、最新のすべての Windows を支えるアーキテクチャです。カーネル、ドライバーモデル、システムサービスがこれにあたります。LiberNT はこのアーキテクチャの上に築かれた自由なオペレーティングシステムで、Windows 11 を比較の基準としています。
+> NT は初めてですか？ **NT** は、最新のすべての Windows を支えるアーキテクチャです。カーネル、ドライバーモデル、システムサービスがこれにあたります。LiberNT: Galaxy Edition はこのアーキテクチャの上に築かれた自由なオペレーティングシステムで、Windows 11 を比較の基準としています。
 
 ---
 
 ## 目次
 
-- [LiberNT に含まれるもの](#libernt-に含まれるもの)
+- [LiberNT: Galaxy Edition に含まれるもの](#libernt-galaxy-edition-に含まれるもの)
 - [対応プラットフォーム](#対応プラットフォーム)
 - [はじめに](#はじめに)
   - [ステップ 1: ビルドをダウンロードする](#ステップ-1-ビルドをダウンロードする)
   - [ステップ 2: 起動する](#ステップ-2-起動する)
-  - [ステップ 3: LiberNT をインストールする](#ステップ-3-libernt-をインストールする)
-- [LiberNT を自分でビルドする](#libernt-を自分でビルドする)
+  - [ステップ 3: LiberNT: Galaxy Edition をインストールする](#ステップ-3-libernt-galaxy-edition-をインストールする)
+- [LiberNT: Galaxy Edition を自分でビルドする](#libernt-galaxy-edition-を自分でビルドする)
 - [ビルドホスト](#ビルドホスト)
 - [プロジェクトの構成](#プロジェクトの構成)
 - [貢献する](#貢献する)
@@ -78,9 +78,9 @@ LiberNT はカーネル空間のコンポーネントとドライバーに大規
 
 ---
 
-## LiberNT に含まれるもの
+## LiberNT: Galaxy Edition に含まれるもの
 
-LiberNT は最新のハードウェアとプラットフォームを NT アーキテクチャにもたらします。
+LiberNT: Galaxy Edition は最新のハードウェアとプラットフォームを NT アーキテクチャにもたらします。
 
 | 機能 | あなたにとっての意味 |
 | --- | --- |
@@ -90,11 +90,11 @@ LiberNT は最新のハードウェアとプラットフォームを NT アー�
 | **ボードのサポート** | Raspberry Pi とその RP1 I/O コントローラーを含む実機ボード。 |
 | **Windows 11 のドライバーモデル** | Windows 11 (NT10) との互換性とドライバーモデルの取り組みを、Windows 11 そのものと照らし合わせて確認しています。 |
 | **Arm でのグラフィックスと x86 アプリ** | Mesa を使ったグラフィックスドライバーモデルと、FEX を使った WoW64 は、有効にできるビルドオプションです。 |
-| **LiberNT セットアップ** | Windows セットアップと同じようにドライブを一覧表示し、パーティションの作成、削除、フォーマット、縮小、拡張を行い、必要な EFI システムパーティションとともに LiberNT を NTFS にインストールします。 |
+| **LiberNT: Galaxy Edition セットアップ** | Windows セットアップと同じようにドライブを一覧表示し、パーティションの作成、削除、フォーマット、縮小、拡張を行い、必要な EFI システムパーティションとともに LiberNT: Galaxy Edition を NTFS にインストールします。 |
 | **自分だけのビルド** | `menuconfig` で、ターゲット、コンパイラー、ビルドの種類を選び、機能のオン・オフを切り替えられます。 |
 
 > [!TIP]
-> [Releases](https://github.com/LiberNT/LiberNT/releases) ページの各ビルドには、前回からの変更点が記載されています。
+> [Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) ページの各ビルドには、前回からの変更点が記載されています。
 
 ---
 
@@ -115,21 +115,18 @@ LiberNT は最新のハードウェアとプラットフォームを NT アー�
 
 ### ステップ 1: ビルドをダウンロードする
 
-[Releases](https://github.com/LiberNT/LiberNT/releases) ページの各ビルドは、イメージとアーキテクチャごとに 1 つの ZIP ファイルで提供されます。
+[Releases](https://github.com/LotusBrowser/LiberNT.Galaxy/releases) ページの各ビルドは、イメージとアーキテクチャごとに 1 つの ZIP ファイルで提供されます。
 
 | ファイル | 内容 |
 | --- | --- |
-| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`。LiberNT を実行するか、LiberNT セットアップを起動する CD イメージ |
-| `LiberNT-img-…-<arch>-…zip` | `LiberNT.img`。LiberNT がインストール済みのディスク |
-| `LiberNT-vhd-…-<arch>-…zip` | `LiberNT.vhd`。VHD ベースの仮想マシン向けの、同じプリインストール済みディスク |
-| `LiberNT-vhdx-…-<arch>-…zip` | `LiberNT.vhdx`。Hyper-V 第 2 世代向けの、同じプリインストール済みディスク |
+| `bootcd-iso-…-<arch>-…zip` | `bootcd.iso`。LiberNT: Galaxy Edition を実行するか、LiberNT: Galaxy Edition セットアップを起動する CD イメージ |
 
 > [!NOTE]
 > これらは、GitHub Actions が `main-nt10` ブランチから作成した Clang の Debug ビルドです。
 
 ### ステップ 2: 起動する
 
-LiberNT を最も手早く試せるのは、プリインストール済みディスクです。
+LiberNT: Galaxy Edition を最も手早く試せるのは、プリインストール済みディスクです。
 
 1. `LiberNT.img`（または `LiberNT.vhd`）を展開します
 2. **QEMU** などの仮想マシンで起動するか、VHD を **VirtualBox** または **Hyper-V** 第 1 世代の仮想マシンで使います。Hyper-V 第 2 世代は `LiberNT.vhdx` しか受け付けず、セキュアブートを無効にする必要があります
@@ -138,11 +135,11 @@ LiberNT を最も手早く試せるのは、プリインストール済みディ
 > [!CAUTION]
 > `LiberNT.img` を USB ドライブや SD カードに書き込むと、その中身はすべて消去されます。書き込み先のデバイスを必ず確認してください。
 
-### ステップ 3: LiberNT をインストールする
+### ステップ 3: LiberNT: Galaxy Edition をインストールする
 
-仮想マシンまたは PC で `bootcd.iso` を起動し、**LiberNT セットアップ**の指示に従います。
+仮想マシンまたは PC で `bootcd.iso` を起動し、**LiberNT: Galaxy Edition セットアップ**の指示に従います。
 
-プリインストール済みディスクにも LiberNT セットアップが入っています。実行中のシステムから別のディスクに LiberNT をインストールするには、`C:\<アーキテクチャ>\libernt.exe`（たとえば `C:\arm64\libernt.exe`）を実行します。
+プリインストール済みディスクにも LiberNT: Galaxy Edition セットアップが入っています。実行中のシステムから別のディスクに LiberNT: Galaxy Edition をインストールするには、`C:\<アーキテクチャ>\libernt.exe`（たとえば `C:\arm64\libernt.exe`）を実行します。
 
 > [!CAUTION]
 > セットアップはパーティションを削除・フォーマットできます。インストールの前に、インストール先ディスクの大切なデータをバックアップしてください。
@@ -151,13 +148,13 @@ LiberNT を最も手早く試せるのは、プリインストール済みディ
 
 ---
 
-## LiberNT を自分でビルドする
+## LiberNT: Galaxy Edition を自分でビルドする
 
-LiberNT は、クロスビルド用ツールチェーンの RosBE でビルドします。以下の手順は Linux と macOS、そして WSL2 経由の Windows で使えます。
+LiberNT: Galaxy Edition は、クロスビルド用ツールチェーンの RosBE でビルドします。以下の手順は Linux と macOS、そして WSL2 経由の Windows で使えます。
 
 ### 1. ツールチェーンをインストールする
 
-自分のマシン用の Git、CMake、Ninja、C/C++ コンパイラーが必要です。RosBE は LiberNT をビルドするコンパイラーを追加します。
+自分のマシン用の Git、CMake、Ninja、C/C++ コンパイラーが必要です。RosBE は LiberNT: Galaxy Edition をビルドするコンパイラーを追加します。
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/main/rosbe-unix-bootstrap.sh | sh
@@ -169,8 +166,8 @@ curl -fsSL https://raw.githubusercontent.com/LiberNT/libernt-build-toolchain/mai
 ### 2. ソースを取得する
 
 ```sh
-git clone https://github.com/LiberNT/LiberNT.git
-cd LiberNT
+git clone https://github.com/LotusBrowser/LiberNT.Galaxy.git
+cd LiberNT.Galaxy
 ```
 
 > [!NOTE]
@@ -222,8 +219,8 @@ ninja liberntimg
 
 | コマンド | 作成されるもの | 用途 |
 | --- | --- | --- |
-| `ninja bootcd` | `bootcd.iso` | 仮想マシンまたは PC で、CD イメージから LiberNT をインストールする。 |
-| `ninja liberntimg` | `LiberNT.img` | LiberNT がインストール済みのディスクを起動する。QEMU などの仮想マシンで起動するか、USB ドライブや SD カードに書き込みます。UEFI と BIOS のどちらでも起動します。 |
+| `ninja bootcd` | `bootcd.iso` | 仮想マシンまたは PC で、CD イメージから LiberNT: Galaxy Edition をインストールする。 |
+| `ninja liberntimg` | `LiberNT.img` | LiberNT: Galaxy Edition がインストール済みのディスクを起動する。QEMU などの仮想マシンで起動するか、USB ドライブや SD カードに書き込みます。UEFI と BIOS のどちらでも起動します。 |
 | `ninja liberntvhd` | `LiberNT.vhd`、`LiberNT.vhdx` | 同じプリインストール済みディスクを仮想マシンで使う。VHD は VirtualBox と Hyper-V 第 1 世代で、VHDX は VHD ディスクを受け付けない Hyper-V 第 2 世代で使います。 |
 
 各ターゲットは必要なものをすべて先にビルドし、ファイルは出力フォルダーに書き出されます。
@@ -245,7 +242,7 @@ ninja liberntimg
 ## プロジェクトの構成
 
 ```text
-LiberNT/
+LiberNT.Galaxy/
 ├── base/            # アプリケーション、サービス、セットアップ、シェル
 ├── boot/            # FreeLoader、ブートデータ、ブートイメージ
 ├── bootloader/      # ブートマネージャー、Windows ローダー、UEFI と Open Firmware のサポート
@@ -267,9 +264,9 @@ LiberNT/
 
 ## 貢献する
 
-バグの報告や機能の提案は [Issues](https://github.com/LiberNT/LiberNT/issues) で、ガイドやメモは [Wiki](https://github.com/LiberNT/LiberNT/wiki) で見つけられます。
+バグの報告や機能の提案は [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) で、ガイドやメモは [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki) で見つけられます。
 
-[CONTRIBUTING.md](CONTRIBUTING.md) と [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md) を参照してください。大きな変更を計画している場合は、先に [Issues](https://github.com/LiberNT/LiberNT/issues) または [Discord](https://discord.gg/BpcKg7FZ2) で相談してください。
+[CONTRIBUTING.md](CONTRIBUTING.md) と [PULL_REQUEST_MANAGEMENT.md](PULL_REQUEST_MANAGEMENT.md) を参照してください。大きな変更を計画している場合は、先に [Issues](https://github.com/LotusBrowser/LiberNT.Galaxy/issues) または [Discord](https://discord.gg/BpcKg7FZ2) で相談してください。
 
 > [!WARNING]
 > **法的注意事項:** Microsoft Windows のプロプライエタリなソースコード（流出した Windows NT 3.5、NT 4、2000 のソースコードや Windows Research Kernel を含みますが、これらに限りません）を見たことがある場合、著作権侵害のおそれがあるため、あなたの貢献は受け付けられません。
@@ -278,7 +275,7 @@ LiberNT/
 
 ## AI の利用
 
-はっきりさせておきます。AI は LiberNT の開発方法の一部です。コードのレビューや作成を手伝い、AI が書いたものはすべて人間がレビューします。メインブランチに何かが入る前に、人間がエンドツーエンドのテストを実行して検証します。私たちはこのプロジェクトを大切に思っているので、リグレッションを見逃すことはしません。
+はっきりさせておきます。AI は LiberNT: Galaxy Edition の開発方法の一部です。コードのレビューや作成を手伝い、AI が書いたものはすべて人間がレビューします。メインブランチに何かが入る前に、人間がエンドツーエンドのテストを実行して検証します。私たちはこのプロジェクトを大切に思っているので、リグレッションを見逃すことはしません。
 
 AI は、ドキュメントを読む、定義を抽出する、バグを修正するといった作業も手伝います。個々のバグについて、Microsoft Learn の公式ドキュメントの記述と私たちの関数の実際の動作を比較し、動作がどこで食い違っているかを正確に把握できるようにします。
 
@@ -296,20 +293,20 @@ AI は、ドキュメントを読む、定義を抽出する、バグを修正�
 
 ## ライセンス
 
-LiberNT は [GNU GPL 3.0](../../COPYING) でライセンスされています。ほかのプロジェクトから引き継いだコードは、ファイルのヘッダーに記載されたライセンスを維持しており、その多くは GPL 2.0 以降です。これらのファイルが参照する GPL 2.0、LGPL 2.1、BSD のライセンス文は [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB)、[COPYING.ARM](../../COPYING.ARM) にあります。
+LiberNT: Galaxy Edition は [GNU GPL 3.0](../../COPYING) でライセンスされています。ほかのプロジェクトから引き継いだコードは、ファイルのヘッダーに記載されたライセンスを維持しており、その多くは GPL 2.0 以降です。これらのファイルが参照する GPL 2.0、LGPL 2.1、BSD のライセンス文は [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB)、[COPYING.ARM](../../COPYING.ARM) にあります。
 
-LiberNT で加えられた変更の著作権は Copyright © 2026 LiberNT コントリビューターに帰属します。引き継いだコードやサードパーティのコードは、作者の著作権表示を維持します。[CREDITS.md](../../CREDITS.md) を参照してください。
+LiberNT: Galaxy Edition で加えられた変更の著作権は Copyright © 2026 LiberNT コントリビューターに帰属します。引き継いだコードやサードパーティのコードは、作者の著作権表示を維持します。[CREDITS.md](../../CREDITS.md) を参照してください。
 
-LiberNT は独立したプロジェクトです。Microsoft との提携はなく、Microsoft による承認や後援も受けていません。Windows® は Microsoft Corporation の登録商標です。
+LiberNT: Galaxy Edition は独立したプロジェクトです。Microsoft との提携はなく、Microsoft による承認や後援も受けていません。Windows® は Microsoft Corporation の登録商標です。
 
 ---
 
 ## このプロジェクトについて
 
-LiberNT は **LiberNT コントリビューター**によって開発されており、[Ahmed Arif](https://github.com/ahmedarif193) が立ち上げ、[Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre)、[Vivyy](https://github.com/enginelesscc) がメンテナンスしています。
+LiberNT: Galaxy Edition は **LiberNT コントリビューター**によって開発されており、[Ahmed Arif](https://github.com/ahmedarif193) が立ち上げ、[Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre)、[Vivyy](https://github.com/enginelesscc) がメンテナンスしています。
 
 - [LiberNT オーガニゼーションを見る](https://github.com/LiberNT)
 - [ウェブサイト](https://libernt.com)
-- [最新のビルドをダウンロード](https://github.com/LiberNT/LiberNT/releases)
-- [Wiki](https://github.com/LiberNT/LiberNT/wiki)
+- [最新のビルドをダウンロード](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
+- [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
 - [Discord](https://discord.gg/BpcKg7FZ2) または [Matrix](https://matrix.to/#/#libernt:matrix.org) でチャット
