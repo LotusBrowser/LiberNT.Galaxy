@@ -298,7 +298,7 @@ BootUiDrawErrors(ULONG Height)
 }
 
 static VOID
-BootUiImage(const UCHAR* Image, ULONG ImageWidth, ULONG ImageHeight, ULONG Left, ULONG Top, ULONG Scale)
+BootUiRaster(const UCHAR* Image, ULONG ImageWidth, ULONG ImageHeight, ULONG Left, ULONG Top, ULONG Scale)
 {
     ULONG Width = ImageWidth / Scale, Height = ImageHeight / Scale;
     ULONG X, Y;
@@ -321,7 +321,7 @@ BootUiImage(const UCHAR* Image, ULONG ImageWidth, ULONG ImageHeight, ULONG Left,
 static VOID
 BootUiLogo(ULONG Left, ULONG Top, ULONG Scale)
 {
-    BootUiImage(bootui_logo, 48, 42, Left, Top, Scale);
+    BootUiRaster(bootui_logo, 48, 42, Left, Top, Scale);
 }
 
 static VOID
@@ -331,7 +331,7 @@ BootUiBrand(VOID)
     ULONG Width = 168 / Scale;
     ULONG Left = (BootUiWidth - Width) / 2;
     ULONG Top = BootUiHeight < 600 ? 10 : 24;
-    BootUiImage(bootui_banner, 168, 48, Left, Top, Scale);
+    BootUiRaster(bootui_banner, 168, 48, Left, Top, Scale);
 }
 
 static VOID
