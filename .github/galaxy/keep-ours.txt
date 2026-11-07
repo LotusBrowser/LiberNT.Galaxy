@@ -6,3 +6,12 @@
 # *.ico
 # Themes/Galaxy*.xaml
 # README.md
+
+# ---- LiberNT: Galaxy Edition: files that exist only in Galaxy, or that Galaxy fully owns ----
+# New theme (bitmaps, INI files, .rc, lang, CMake, recolor tools): upstream never has these,
+# so this only guards against upstream ever adding a same-named path.
+media/themes/Galaxy/*
+# Default wallpaper (replace this file with your own PNG; nothing else needs to change).
+modules/wallpapers/Galaxy.png
+# Wallpaper generator and any source artwork.
+artwork/*

@@ -380,7 +380,7 @@ ApplyContrastScheme(int index)
         color = ReadString(HKEY_CURRENT_USER, LIBERNT_SETTINGS_KEY, L"VisualStyleColor");
         size = ReadString(HKEY_CURRENT_USER, LIBERNT_SETTINGS_KEY, L"VisualStyleSize");
         if (style.empty() && GetWindowsDirectoryW(windows, _countof(windows)))
-            style = std::wstring(windows) + L"\\Resources\\Themes\\Aero\\aero.msstyles";
+            style = std::wstring(windows) + L"\\Resources\\Themes\\Galaxy\\galaxy.msstyles";
         SetSystemVisualStyle(style.c_str(), color.c_str(), size.c_str(), 0);
         return;
     }
