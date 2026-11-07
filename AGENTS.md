@@ -4,7 +4,7 @@ This file introduces LiberNT: Galaxy Edition and sets the working rules and engi
 
 ## About LiberNT: Galaxy Edition
 
-LiberNT: Galaxy Edition is a free NT operating system. It is a fork of ReactOS with extensive changes to kernel-space components and drivers, aimed at stability and modern hardware. It focuses on 64-bit platforms, amd64, arm64 and riscv64, and targets NT10/Windows 11 compatibility. LiberNT: Galaxy Edition may collaborate with ReactOS occasionally, but the code written here is written for LiberNT: Galaxy Edition first: never shape a change around sending it to ReactOS.
+LiberNT: Galaxy Edition is a fork of LiberNT, the free NT operating system, with a Galaxy theme. It is owned and maintained by Lotus. LiberNT is a fork of ReactOS with extensive changes to kernel-space components and drivers, aimed at stability and modern hardware; it focuses on 64-bit platforms, amd64, arm64 and riscv64, and targets NT10/Windows 11 compatibility. LiberNT: Galaxy Edition may collaborate with ReactOS occasionally, but the code written here is written for LiberNT: Galaxy Edition first: never shape a change around sending it to ReactOS.
 
 - Target architectures: amd64, i386 and arm64, with RISC-V64/PPC in progress.
 - Windows 11 is the compatibility reference.
@@ -119,7 +119,7 @@ Most of the tree is still shared with ReactOS, and the components synchronised w
 
 - Reuse the existing build directories and artifacts. Do not duplicate build caches, executables or disk images, or create per-test, per-session, dated or prefixed output paths.
 - Run builds with `CCACHE_DISABLE=1`; compiler caching is disabled to avoid duplicate artifacts.
-- Keep one working log, overwritten in place. Use the existing build's `LiberNT.img` and one fixed test payload image. Pass the raw payload image to `--apps`; passing a directory creates additional cached images and overlays.
+- Keep one working log, overwritten in place. Use the existing build's `bootcd.iso` and one fixed test payload image. Pass the raw payload image to `--apps`; passing a directory creates additional cached images and overlays.
 - Run `vm_monitor.py` with `--timeout 30 --stall 6`. Never use a timeout above 30 seconds or a stall timeout above 6 seconds.
 - Run without a display by setting `ROS_QEMU_DISPLAY=none`; omit screen arguments.
 - Never rebuild or repack a disk image while a VM is using it.

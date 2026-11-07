@@ -11,7 +11,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
 ### 自由的 NT 操作系统
 
 **源于对 NT 架构的热爱，兼容 Windows® 11，支持 amd64、arm64 与 riscv64。**
@@ -31,14 +31,6 @@
 
 </div>
 
-## 赞助
-
-<p align="center">
-  <a href="https://github.com/sponsors/ahmedarif193">
-    <img src="https://img.shields.io/badge/Sponsor-LiberNT-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor LiberNT">
-  </a>
-</p>
-
 ---
 
 <p align="center">
@@ -49,7 +41,9 @@
 
 ---
 
-LiberNT: Galaxy Edition 是一个自由的 NT 操作系统。名字本身已经说明：*liber* 在拉丁语里意为**自由**。它以**兼容 Windows® 11** 为目标，也为自由发挥和实验性功能留出余地。
+LiberNT: Galaxy Edition 是 [LiberNT](https://github.com/LiberNT/LiberNT) 的一个分支，带有 Galaxy 主题。它归 [Lotus](https://github.com/LotusBrowser) 所有并由其维护；LiberNT 仍是其自身贡献者的作品。
+
+LiberNT 是一个自由的 NT 操作系统。名字本身已经说明：*liber* 在拉丁语里意为**自由**。它以**兼容 Windows® 11** 为目标，也为自由发挥和实验性功能留出余地。
 
 LiberNT: Galaxy Edition 在内核态组件与驱动上投入了大量工作，着眼稳定性与现代硬件，主攻 64 位平台：**amd64、arm64 与 riscv64**。
 
@@ -289,7 +283,7 @@ AI 还帮我们读文档、提取定义、修复缺陷。遇到具体缺陷时�
 
 LiberNT: Galaxy Edition 以 [GNU GPL 3.0](../../COPYING) 授权。沿用自其他项目的代码保留其文件头声明的许可证，大多为 GPL 2.0 或更高版本。这些文件引用的 GPL 2.0、LGPL 2.1 和 BSD 文本见 [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB) 和 [COPYING.ARM](../../COPYING.ARM)。
 
-LiberNT: Galaxy Edition 中的改动版权归 LiberNT 贡献者所有，© 2026。沿用代码与第三方代码保留原作者的版权声明。详见 [CREDITS.md](../../CREDITS.md)。
+LiberNT: Galaxy Edition 中的改动版权归 Lotus 所有，© 2026。沿用代码与第三方代码保留原作者的版权声明。详见 [CREDITS.md](../../CREDITS.md)。
 
 LiberNT: Galaxy Edition 是独立项目，与 Microsoft 没有隶属、认可或赞助关系。Windows® 是 Microsoft Corporation 的注册商标。
 
@@ -297,9 +291,10 @@ LiberNT: Galaxy Edition 是独立项目，与 Microsoft 没有隶属、认可或
 
 ## 关于
 
-LiberNT: Galaxy Edition 由 **LiberNT 贡献者**共同构建，由 [Ahmed Arif](https://github.com/ahmedarif193) 发起，由 [Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre) 和 [Vivyy](https://github.com/enginelesscc) 维护。
+LiberNT: Galaxy Edition 归 [Lotus](https://github.com/LotusBrowser) 所有并由其维护。它是 LiberNT 的分支，LiberNT 由 **LiberNT 贡献者**共同构建，由 [Ahmed Arif](https://github.com/ahmedarif193) 发起，由 [Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre) 和 [Vivyy](https://github.com/enginelesscc) 维护。
 
-- [访问 LiberNT 组织](https://github.com/LiberNT)
-- [官网](https://libernt.com)
+- [访问 Lotus 组织](https://github.com/LotusBrowser)
+- [上游项目：LiberNT](https://github.com/LiberNT/LiberNT)
+- [LiberNT 官网](https://libernt.com)
 - [下载最新构建](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)

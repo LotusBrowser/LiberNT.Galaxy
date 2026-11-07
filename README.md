@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
 ### A free NT operating system
 
 **Built out of love for the NT architecture. Windows® 11 compatible, for amd64, arm64 and riscv64.**
@@ -29,14 +29,6 @@
 
 </div>
 
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/ahmedarif193">
-    <img src="https://img.shields.io/badge/Sponsor-LiberNT-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor LiberNT">
-  </a>
-</p>
-
 ---
 
 <p align="center">
@@ -47,7 +39,9 @@
 
 ---
 
-LiberNT: Galaxy Edition is a free NT operating system. The name says it: *liber* is Latin for **free**. It targets **Windows® 11 compatibility**, with room for freestyle and experimental features.
+LiberNT: Galaxy Edition is a fork of [LiberNT](https://github.com/LiberNT/LiberNT) with a Galaxy theme. It is owned and maintained by [Lotus](https://github.com/LotusBrowser); LiberNT remains the work of its own contributors.
+
+LiberNT is a free NT operating system. The name says it: *liber* is Latin for **free**. It targets **Windows® 11 compatibility**, with room for freestyle and experimental features.
 
 LiberNT: Galaxy Edition brings extensive work on kernel-space components and drivers, aimed at stability and modern hardware, and it focuses on 64-bit platforms: **amd64, arm64 and riscv64**.
 
@@ -287,7 +281,7 @@ Like any other tool, AI is there to help us achieve our goals. It follows the sa
 
 LiberNT: Galaxy Edition is licensed under the [GNU GPL 3.0](COPYING). Code inherited from other projects keeps the licence stated in its file headers, most of it GPL 2.0 or later. The GPL 2.0, LGPL 2.1 and BSD texts those files refer to are in [COPYING2](COPYING2), [COPYING.LIB](COPYING.LIB) and [COPYING.ARM](COPYING.ARM).
 
-The changes made in LiberNT: Galaxy Edition are Copyright © 2026 the LiberNT contributors. Inherited and third-party code keeps the copyright notices of its authors. See [CREDITS.md](CREDITS.md).
+The changes made in LiberNT: Galaxy Edition are Copyright © 2026 Lotus. Inherited and third-party code keeps the copyright notices of its authors. See [CREDITS.md](CREDITS.md).
 
 LiberNT: Galaxy Edition is an independent project. It is not affiliated with, endorsed by or sponsored by Microsoft. Windows® is a registered trademark of Microsoft Corporation.
 
@@ -295,9 +289,10 @@ LiberNT: Galaxy Edition is an independent project. It is not affiliated with, en
 
 ## About
 
-LiberNT: Galaxy Edition is built by the **LiberNT contributors**. It was started by [Ahmed Arif](https://github.com/ahmedarif193) and is maintained by [Ahmed Arif](https://github.com/ahmedarif193), [Ostap Brehin](https://github.com/osbre) and [Vivyy](https://github.com/enginelesscc).
+LiberNT: Galaxy Edition is owned and maintained by [Lotus](https://github.com/LotusBrowser). It is a fork of LiberNT, which is built by the **LiberNT contributors**. LiberNT was started by [Ahmed Arif](https://github.com/ahmedarif193) and is maintained by [Ahmed Arif](https://github.com/ahmedarif193), [Ostap Brehin](https://github.com/osbre) and [Vivyy](https://github.com/enginelesscc).
 
-- [Visit the LiberNT organization](https://github.com/LiberNT)
-- [Website](https://libernt.com)
+- [Visit the Lotus organization](https://github.com/LotusBrowser)
+- [Upstream: LiberNT](https://github.com/LiberNT/LiberNT)
+- [LiberNT website](https://libernt.com)
 - [Download the latest build](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)

@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# [LiberNT: Galaxy Edition](https://libernt.com)
+# [LiberNT: Galaxy Edition](https://github.com/LotusBrowser/LiberNT.Galaxy)
 ### 自由な NT オペレーティングシステム
 
 **NT アーキテクチャへの愛から生まれました。Windows® 11 互換、amd64・arm64・riscv64 対応。**
@@ -29,14 +29,6 @@
 
 </div>
 
-## スポンサー
-
-<p align="center">
-  <a href="https://github.com/sponsors/ahmedarif193">
-    <img src="https://img.shields.io/badge/Sponsor-LiberNT-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor LiberNT">
-  </a>
-</p>
-
 ---
 
 <p align="center">
@@ -47,7 +39,9 @@
 
 ---
 
-LiberNT: Galaxy Edition は自由な NT オペレーティングシステムです。名前がそれを表しています。*liber* はラテン語で**自由**を意味します。**Windows® 11 との互換性**を目標とし、自由で実験的な機能の余地も残しています。
+LiberNT: Galaxy Edition は [LiberNT](https://github.com/LiberNT/LiberNT) をフォークし、Galaxy テーマを加えたものです。[Lotus](https://github.com/LotusBrowser) が所有・メンテナンスしており、LiberNT は引き続きそのコントリビューター自身の成果です。
+
+LiberNT は自由な NT オペレーティングシステムです。名前がそれを表しています。*liber* はラテン語で**自由**を意味します。**Windows® 11 との互換性**を目標とし、自由で実験的な機能の余地も残しています。
 
 LiberNT: Galaxy Edition はカーネル空間のコンポーネントとドライバーに大規模な改良を加えており、安定性と最新のハードウェアを重視し、64 ビットプラットフォーム（**amd64・arm64・riscv64**）に注力しています。
 
@@ -287,7 +281,7 @@ AI は、ドキュメントを読む、定義を抽出する、バグを修正�
 
 LiberNT: Galaxy Edition は [GNU GPL 3.0](../../COPYING) でライセンスされています。ほかのプロジェクトから引き継いだコードは、ファイルのヘッダーに記載されたライセンスを維持しており、その多くは GPL 2.0 以降です。これらのファイルが参照する GPL 2.0、LGPL 2.1、BSD のライセンス文は [COPYING2](../../COPYING2)、[COPYING.LIB](../../COPYING.LIB)、[COPYING.ARM](../../COPYING.ARM) にあります。
 
-LiberNT: Galaxy Edition で加えられた変更の著作権は Copyright © 2026 LiberNT コントリビューターに帰属します。引き継いだコードやサードパーティのコードは、作者の著作権表示を維持します。[CREDITS.md](../../CREDITS.md) を参照してください。
+LiberNT: Galaxy Edition で加えられた変更の著作権は Copyright © 2026 Lotus に帰属します。引き継いだコードやサードパーティのコードは、作者の著作権表示を維持します。[CREDITS.md](../../CREDITS.md) を参照してください。
 
 LiberNT: Galaxy Edition は独立したプロジェクトです。Microsoft との提携はなく、Microsoft による承認や後援も受けていません。Windows® は Microsoft Corporation の登録商標です。
 
@@ -295,9 +289,10 @@ LiberNT: Galaxy Edition は独立したプロジェクトです。Microsoft と�
 
 ## このプロジェクトについて
 
-LiberNT: Galaxy Edition は **LiberNT コントリビューター**によって開発されており、[Ahmed Arif](https://github.com/ahmedarif193) が立ち上げ、[Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre)、[Vivyy](https://github.com/enginelesscc) がメンテナンスしています。
+LiberNT: Galaxy Edition は [Lotus](https://github.com/LotusBrowser) が所有・メンテナンスしています。これは LiberNT のフォークで、LiberNT は **LiberNT コントリビューター**によって開発されており、[Ahmed Arif](https://github.com/ahmedarif193) が立ち上げ、[Ahmed Arif](https://github.com/ahmedarif193)、[Ostap Brehin](https://github.com/osbre)、[Vivyy](https://github.com/enginelesscc) がメンテナンスしています。
 
-- [LiberNT オーガニゼーションを見る](https://github.com/LiberNT)
-- [ウェブサイト](https://libernt.com)
+- [Lotus オーガニゼーションを見る](https://github.com/LotusBrowser)
+- [アップストリーム: LiberNT](https://github.com/LiberNT/LiberNT)
+- [LiberNT ウェブサイト](https://libernt.com)
 - [最新のビルドをダウンロード](https://github.com/LotusBrowser/LiberNT.Galaxy/releases)
 - [Wiki](https://github.com/LotusBrowser/LiberNT.Galaxy/wiki)
