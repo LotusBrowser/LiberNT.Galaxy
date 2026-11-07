@@ -49,5 +49,5 @@ jobs:
         if: steps.check.outputs.needs_merge == 'true'
         run: |
           git merge libernt/main-nt10 --no-ff --allow-unrelated-histories \
-            -m "Merge LiberNT into LotusOS"
+            -m "Merge LiberNT into LiberNT: Galaxy Edition"
           git push origin main-nt10

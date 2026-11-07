@@ -56,7 +56,7 @@ jobs:
           INPUT_TYPE: ${{ inputs.build_type }}
         run: |
           # Tags build Release for amd64 and arm64; manual runs follow the inputs;
-          # everything else is a Debug amd64 build, as on the LotusOS CI.
+          # everything else is a Debug amd64 build, as on the LiberNT: Galaxy Edition CI.
           buildtype=debug
           arches=amd64
           if [ "$REF_TYPE" = tag ]; then
@@ -68,7 +68,7 @@ jobs:
             [ "$arches" = all ] && arches="amd64 arm64 riscv64 i386"
           fi
 
-          # Compiler and board profile per architecture, as in the LotusOS build workflow.
+          # Compiler and board profile per architecture, as in the LiberNT: Galaxy Edition build workflow.
           entry() {
             case "$1" in
               amd64)   echo '{"arch":"amd64","compiler":"clang","profile":""}' ;;
@@ -193,7 +193,7 @@ jobs:
       - name: Upload bootcd.iso
         uses: actions/upload-artifact@v7
         with:
-          name: LotusOS-bootcd-iso-${{ steps.images.outputs.tag }}
+          name: LiberNT.Galaxy-bootcd-iso-${{ steps.images.outputs.tag }}
           path: ${{ steps.configure.outputs.outdir }}/bootcd.iso
           if-no-files-found: error
 
@@ -229,6 +229,6 @@ jobs:
         run: |
           gh release create "${{ github.ref_name }}" dist/*.zip \
             --repo "${{ github.repository }}" \
-            --title "LotusOS ${{ github.ref_name }}" \
+            --title "LiberNT: Galaxy Edition ${{ github.ref_name }}" \
             --prerelease \
-            --notes "Release build of LotusOS from commit ${GITHUB_SHA::11}. Run it in a virtual machine or on spare hardware, not on a computer you depend on."
+            --notes "Release build of LiberNT: Galaxy Edition from commit ${GITHUB_SHA::11}. Run it in a virtual machine or on spare hardware, not on a computer you depend on."
